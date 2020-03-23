@@ -179,4 +179,4 @@ if env('USE_S3'):
 # Configure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
-# del DATABASES['default']['OPTIONS']['sslmode']
+del DATABASES['default']['OPTIONS']['sslmode']

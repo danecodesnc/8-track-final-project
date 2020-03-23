@@ -7,4 +7,8 @@ from .models import Album
 from users.models import User
 from django.db.models import Q
 
+@login_required
+def rec_list(request):
+    return render(request, 'core/rec_list.html',)
+
 
