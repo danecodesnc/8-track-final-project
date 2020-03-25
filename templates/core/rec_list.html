@@ -16,20 +16,20 @@
         <a href="album.html">
         <div class="album">
             <!-- <div class="priority">1</div> -->
-            <img class="album-cover" src="sigiriya.jpg">
+            <img class="album-cover" src="{{ album_info.cover.url }}">
             <div class="album-info">
-                <div class="album-title">Maiden Mother Crone</div>
-                <div class="artist">Sigiriya</div>
-                <div class="album-year">2020</div>
+                <div class="album-title">{{ album_info.name }}</div>
+                <div class="artist">{{ album_info.artist }}</div>
+                <div class="album-year">{{ album_info.release }}</div>
             </div>
-            <div class="rating">
+            <!-- <div class="rating">
                 Artist Rating:
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="far fa-star"></i>
                 <i class="far fa-star"></i>
-            </div>
+            </div> -->
         </div>
         </a>
         <hr>

@@ -26,11 +26,12 @@ def rec_list(request):
 
     album_info = {
         'name' : searched_album['albums']['items'][0]['name'],
-        'artist' : searched_album.albums.items[0].artists.name,
-        'release' : searched_album.albums.items[0].release_date,
-        'cover' : searched_album.albums.items[0].images[0],
+        'artist' : searched_album['albums']['items'][0]['artists'][0]['name'],
+        'release' : searched_album['albums']['items'][0]['release_date'],
+        'cover' : searched_album['albums']['items'][0]['images'][0],
     }
     print(album_info)
-    return render(request, 'core/rec_list.html',)
+    context = {'album_info' : album_info}
+    return render(request, 'core/rec_list.html', context=context)
 
 
