@@ -21,6 +21,7 @@ pillow = "*"
 psycopg2 = "*"
 django-heroku = "*"
 gunicorn = "*"
+spotipy = "*"
 
 [requires]
 python_version = "3.7"
