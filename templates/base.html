@@ -31,9 +31,9 @@
     </div>
     <div class="user-profile">
         <a class="header-button" href="/">
-            <img class="avatar" src="ProfilePic.jpg">
+            <img class="avatar" src="{{request.user.avatar.url}}">
             <div class="links">
-                <div class="profile">MvanRossum |</div>
+                <div class="profile">{{request.user.username}} |</div>
                 <div class="lists" href="/"> My Lists | </div>
                 <div class="log" href="/"> My Log |</div>
             </div>
