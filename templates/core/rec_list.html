@@ -4,12 +4,9 @@
     <div class="container">
         <div class="list-head">
             <h2>REC. LIST</h2>
+            <a href="{% url 'new-album' %}">
             <div class="new-rec">New Rec. +</div>
-            <div class="site-search">
-                <input type="text" placeholder="Add a new album">
-                {{ form.name }}
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </div>
+            </a>
         </div>
     <hr>
     <div class ="album-list">

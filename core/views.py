@@ -34,4 +34,5 @@ def rec_list(request):
     context = {'album_info' : album_info}
     return render(request, 'core/rec_list.html', context=context)
 
-
+def new_album(request):
+   return render(request, 'core/new_album.html', ) 
