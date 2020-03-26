@@ -26,8 +26,10 @@
         <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
     </div>
     <div class="site-search">
-        <input type="text" placeholder="Search 8-Track">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <form action="/albums/search/" method="GET" id="site-search">
+            <input type="text" name="site-search" placeholder="Search 8-Track">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
     <div class="user-profile">
         <a class="header-button" href="/">
