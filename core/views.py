@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_GET, require_POST
 from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import Album
 # from .forms import 
 from users.models import User
@@ -30,10 +31,11 @@ def rec_list(request):
         'release' : searched_album['albums']['items'][0]['release_date'],
         'cover' : searched_album['albums']['items'][0]['images'][0],
     }
-    print(album_info)
+    
     context = {'album_info' : album_info}
     return render(request, 'core/rec_list.html', context=context)
 
+@csrf_exempt
 def new_album(request):
    return render(request, 'core/new_album.html', ) 
 
