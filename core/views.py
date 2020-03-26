@@ -37,4 +37,29 @@ def rec_list(request):
 
 @csrf_exempt
 def new_album(request):
-   return render(request, 'core/new_album.html',) 
+   return render(request, 'core/new_album.html', ) 
+
+def site_search(request):
+    search_str = request.GET.get('site-search')
+    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
+    result = sp.search(q=(search_str), type='album', limit=50)
+    return result
+
+def search_results(request):
+    search = site_search(request)
+    albums = search['albums']['items']
+    all_albums = []
+    for album in albums:
+        album_info = {
+            'name' : album['name'],
+            'artist' : album['artists'][0]['name'],
+            'release' : album['release_date'],
+            'cover' : album['images'][0]
+        }
+        print(album_info)
+        all_albums.append(album_info)
+    context = {'all_albums': all_albums}
+    return render(request, 'core/search_results.html', context=context)
+
+
+
