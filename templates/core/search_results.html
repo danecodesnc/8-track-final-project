@@ -1,27 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
 <body>
-    <div class="container">
-        <div class="list-head">
-            <h2>REC. LIST</h2>
-            <a href="{% url 'new-album' %}">
-            <div class="new-rec">New Rec. +</div>
-            </a>
-        </div>
-    <hr>
     <div class ="album-list">
-        <a href="#">
+        {% for album_info in all_albums %}
+        <a href="album.html">
         <div class="album">
+            <!-- <div class="priority">1</div> -->
             <img class="album-cover" src="{{ album_info.cover.url }}">
             <div class="album-info">
                 <div class="album-title">{{ album_info.name }}</div>
                 <div class="artist">{{ album_info.artist }}</div>
                 <div class="album-year">{{ album_info.release }}</div>
             </div>
+            <!-- <div class="rating">
+                Artist Rating:
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div> -->
         </div>
         </a>
         <hr>
-    
+        {% endfor %}
     </div>
 </body>
 

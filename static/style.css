@@ -1,7 +1,7 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 
@@ -99,9 +99,9 @@ h1::before {
 }
 
 @keyframes dodge-area {
-    to {
-        transform: translate(50%,50%);
-    }
+  to {
+    transform: translate(50%, 50%);
+  }
 }
 
 .sub-head {
@@ -115,148 +115,149 @@ h1::before {
 }
 
 .user-profile {
-    display: inline-block;
-    margin-top: 5px;
-    margin: 15px;
+  display: inline-block;
+  margin-top: 5px;
+  margin: 15px;
 }
 
 .header-button {
-    color: rgb(173, 173, 173);
-    text-emphasis: none;
-    text-decoration: none;
+  color: rgb(173, 173, 173);
+  text-emphasis: none;
+  text-decoration: none;
 }
 
 .header-button:hover {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .avatar {
-    max-width: 50px;
-    border-radius: 50%;
-    border: 1px solid rgb(158, 158, 158);
+  max-width: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(158, 158, 158);
 }
 
 .links {
-    display: flex;
+  display: flex;
 }
 
 .lists {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .log {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .login-logout {
-    margin: 2px;
+  margin: 2px;
 }
 
 .login-out-container {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 5px;
-    right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 5px;
+  right: 5px;
 }
 
 .site-search {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 5px;
-    right: 0;
-    margin-right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  margin-right: 5px;
 }
 
 .site-search input {
-    width: 200px;
-    border-radius: 10px;
-    padding: 2px;
+  width: 200px;
+  border-radius: 10px;
+  padding: 2px;
 }
 
 .site-search button {
-    width: 20px;
+  width: 20px;
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    width: 65%;
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
-    padding: 10px;
-    contain: content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  width: 65%;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  padding: 10px;
+  contain: content;
 }
 
 .list-head {
-    display: flex;
-    contain: content;
+  display: flex;
+  contain: content;
 }
 
 .new-rec {
-   font-family: 'Righteous';
-   font-size: 25px;
-   font-weight: bold; 
-   display: flex;
-   justify-content: flex-end;
-   position: absolute;
-   right: 10px;
-   top: 10px;
-   color: white;
-   background-color: rgb(244, 72, 105);
-   border-radius: 20px;
-   padding: 10px;
-   text-shadow: 0px 0px 5px rgb(159, 1, 234);
+  font-family: "Righteous";
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  background-color: rgb(244, 72, 105);
+  border-radius: 20px;
+  padding: 10px;
+  text-shadow: 0px 0px 5px rgb(159, 1, 234);
 }
 
 .album-list {
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-    padding: 5px;
-    margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 5px;
+  margin-top: 10px;
 }
 
 .album {
-    display: flex;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    contain: content;
+  display: flex;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  contain: content;
+  cursor: pointer;
 }
 
 .priority {
-    font-family: 'Righteous';
-    font-size: 30px;
-    margin-right: 10px;
+  font-family: "Righteous";
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 .album-cover {
-    max-width: 100px;
-    border: 1px solid gray;
+  max-width: 100px;
+  border: 1px solid gray;
 }
 
 .album-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .album-title {
-    display: flex;
-    align-items: center;
-    margin: 5px;
-    font-weight: bold;
-    font-size: 25px;
-    font-style: italic;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
 }
 
 .artist {
-    display: block;
-    margin: 7px;
-    margin-top: 2px;
-    font-size: 18px;
+  display: block;
+  margin: 7px;
+  margin-top: 2px;
+  font-size: 18px;
 }
 
 .album-year {
@@ -338,4 +339,3 @@ h1::before {
 
 
 }
-

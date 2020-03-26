@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}" />
     <script src="{% static 'main.js' %}" defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Righteous&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/a902152cf6.js" crossorigin="anonymous" defer></script>
-    {% block title %}<title>8-Track</title>{% endblock %}
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito|Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a902152cf6.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    {% block title %}
+    <title>8-Track</title>
+    {% endblock %}
+  </head>
 
-<header class="header">
+  <header class="header">
     <div class="neon-wrapper">
-        <h1>8-TRACK</h1>
-        <span class=gradient></span>
-        <span class="dodge"></span>
+      <h1>8-TRACK</h1>
+      <span class="gradient"></span>
+      <span class="dodge"></span>
     </div>
     <div class="sub-head">
-    <h3>Track Your Listening</h3>
-    </div> 
+      <h3>Track Your Listening</h3>
+    </div>
     <div class="login-out-container">
-        <a class="login-logout header-button" href="/accounts/login/">Login |</a>
-        <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
+      <a class="login-logout header-button" href="/accounts/login/">Login |</a>
+      <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
     </div>
     <div class="site-search">
-        <input type="text" placeholder="Search 8-Track">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <form action="/albums/search/" method="GET" id="site-search">
+            <input type="text" name="site-search" placeholder="Search 8-Track">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
     </div>
     <div class="user-profile">
-        <a class="header-button" href="/">
-            <img class="avatar" src="{{request.user.avatar.url}}">
-            <div class="links">
-                <div class="profile">{{request.user.username}} |</div>
-                <div class="lists" href="/"> My Lists | </div>
-                <div class="log" href="/"> My Log |</div>
-            </div>
-        </a>
-    </div> 
-</header>
+      <a class="header-button" href="/">
+        <img class="avatar" src="{{request.user.avatar.url}}" />
+        <div class="links">
+          <div class="profile">{{request.user.username}} |</div>
+          <div class="lists" href="/">My Lists |</div>
+          <div class="log" href="/">My Log |</div>
+        </div>
+      </a>
+    </div>
+  </header>
 
-<body>
-    {% block content %}
-    {% endblock %}
-</body>
+  <body>
+    {% block content %} {% endblock %}
+  </body>
 </html>
