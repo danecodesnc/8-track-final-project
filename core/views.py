@@ -24,17 +24,8 @@ def search_album(request):
 
 @login_required
 def rec_list(request):
-    searched_album = search_album(request)
-    # print(searched_album)
-
-    album_info = {
-        'name' : searched_album['albums']['items'][0]['name'],
-        'artist' : searched_album['albums']['items'][0]['artists'][0]['name'],
-        'release' : searched_album['albums']['items'][0]['release_date'],
-        'cover' : searched_album['albums']['items'][0]['images'][0],
-    }
-    
-    context = {'album_info' : album_info}
+    albums = Album.objects.filter(users=request.user)
+    context = {'albums' : albums }
     return render(request, 'core/rec_list.html', context=context)
 
 @csrf_exempt
@@ -43,8 +34,7 @@ def new_album(request):
        request.body
        data = json.loads(request.body)
        instance = Album(**data)
-    #    instance.users.set = request.user
-    #    print(instance.user)
+       instance.users = request.user
        instance.save()
        return render(request, 'core/new_album.html',) 
 
@@ -65,7 +55,7 @@ def search_results(request):
             'release' : album['release_date'],
             'cover' : album['images'][0]
         }
-        print(album_info)
+        # print(album_info)
         all_albums.append(album_info)
     context = {'all_albums': all_albums}
     return render(request, 'core/search_results.html', context=context)

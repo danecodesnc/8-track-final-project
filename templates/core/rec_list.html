@@ -10,17 +10,19 @@
         </div>
     <hr>
     <div class ="album-list">
+        {% for album in albums %}
         <a href="#">
         <div class="album">
-            <img class="album-cover" src="{{ album_info.cover.url }}">
+            <img class="album-cover" src="{{ album.album_cover }}">
             <div class="album-info">
-                <div class="album-title">{{ album_info.name }}</div>
-                <div class="artist">{{ album_info.artist }}</div>
-                <div class="album-year">{{ album_info.release }}</div>
+                <div class="album-title">{{ album.name }}</div>
+                <div class="artist">{{ album.artist }}</div>
+                <div class="album-year">{{ album.release_date }}</div>
             </div>
         </div>
         </a>
         <hr>
+        {% endfor %}
     
     </div>
 </body>

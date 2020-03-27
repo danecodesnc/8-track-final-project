@@ -11,7 +11,7 @@ class Album(models.Model):
     release_date = models.CharField(max_length=400)
     added_on = models.DateField(auto_now=True)
     album_cover = models.ImageField(default='default.png')
-    users = models.ManyToManyField(User, related_name='user')
+    users = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return f'{self.name}'
