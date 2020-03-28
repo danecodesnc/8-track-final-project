@@ -24,17 +24,8 @@ def search_album(request):
 
 @login_required
 def rec_list(request):
-    searched_album = search_album(request)
-    # print(searched_album)
-
-    album_info = {
-        'name' : searched_album['albums']['items'][0]['name'],
-        'artist' : searched_album['albums']['items'][0]['artists'][0]['name'],
-        'release' : searched_album['albums']['items'][0]['release_date'],
-        'cover' : searched_album['albums']['items'][0]['images'][0],
-    }
-    
-    context = {'album_info' : album_info}
+    albums = Album.objects.filter(users=request.user)
+    context = {'albums' : albums }
     return render(request, 'core/rec_list.html', context=context)
 
 @csrf_exempt
@@ -43,15 +34,14 @@ def new_album(request):
        request.body
        data = json.loads(request.body)
        instance = Album(**data)
-    #    instance.users.set = request.user
-    #    print(instance.user)
+       instance.users = request.user
        instance.save()
        return render(request, 'core/new_album.html',) 
 
 def site_search(request):
     search_str = request.GET.get('site-search')
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-    result = sp.search(q=(search_str), type='album', limit=50)
+    result = sp.search(q=(search_str), type='album,artist', limit=25)
     return result
 
 def search_results(request):
@@ -63,12 +53,17 @@ def search_results(request):
             'name' : album['name'],
             'artist' : album['artists'][0]['name'],
             'release' : album['release_date'],
-            'cover' : album['images'][0]
+            'cover' : album['images'][0],
+            'type' : album['album_type'],
         }
-        print(album_info)
-        all_albums.append(album_info)
+        # print(album_info)
+        if album_info not in all_albums:
+            all_albums.append(album_info)
     context = {'all_albums': all_albums}
     return render(request, 'core/search_results.html', context=context)
 
-
+def delete_album(request, pk): 
+    album = get_object_or_404(Album, pk=pk)
+    album.delete()
+    return redirect ('rec-list')
 

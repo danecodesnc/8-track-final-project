@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.rec_list, name='rec-list'),
     path('albums/new/', views.new_album, name='new-album'),
     path('albums/search/', views.search_results, name='search-results'),
+    path('albums/delete/<int:pk>', views.delete_album, name='delete-album'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:

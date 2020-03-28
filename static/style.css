@@ -208,6 +208,22 @@ h1::before {
   text-shadow: 0px 0px 5px rgb(159, 1, 234);
 }
 
+ol {
+    list-style: none;
+    counter-reset: album-list;
+}
+
+ol li {
+    counter-increment: album-list;
+}
+
+ol li::before {
+    content: counter(album-list) ". ";
+    font-family: 'Righteous';
+    font-size: 30px;
+    display: flex;
+}
+
 .album-list {
   margin-left: auto;
   margin-right: auto;
@@ -225,6 +241,12 @@ h1::before {
   position: relative;
 }
 
+.delete-button i {
+    position: absolute;
+    right: 20%;
+    color: rgb(236,	63,	121);
+}
+
 .priority {
   font-family: "Righteous";
   font-size: 30px;
@@ -232,7 +254,7 @@ h1::before {
 }
 
 .album-cover {
-  max-width: 100px;
+  max-width: 150px;
   border: 1px solid gray;
 }
 
@@ -258,9 +280,15 @@ h1::before {
 }
 
 .album-year {
-  margin-left: 7px;
-  font-style: italic;
+    margin-left: 7px;
+    font-style: italic;
 }
+
+.album-type {
+    margin-left: 7px;
+    font-style: italic;
+    text-transform: capitalize;
+}    
 
 span.save-album {
   position: absolute;
