@@ -53,10 +53,12 @@ def search_results(request):
             'name' : album['name'],
             'artist' : album['artists'][0]['name'],
             'release' : album['release_date'],
-            'cover' : album['images'][0]
+            'cover' : album['images'][0],
+            'type' : album['album_type'],
         }
         # print(album_info)
-        all_albums.append(album_info)
+        if album_info not in all_albums:
+            all_albums.append(album_info)
     context = {'all_albums': all_albums}
     return render(request, 'core/search_results.html', context=context)
 
