@@ -9,8 +9,9 @@
             </a>
         </div>
     <hr>
-    <div class ="album-list">
+    <ol class ="album-list">
         {% for album in albums %}
+        <li>
         <div class="delete-button">
             <a href="{% url 'delete-album' pk=album.pk %}" 
                     onclick="return confirm('Are you sure you want to delete this album from your rec. list?')">
@@ -26,9 +27,10 @@
             </div>
         </div>
         <hr>
+        </li>
         {% endfor %}
     
-    </div>
+    </ol>
 </body>
 
 {% endblock %}

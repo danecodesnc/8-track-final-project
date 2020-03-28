@@ -211,6 +211,22 @@ h1::before {
   text-shadow: 0px 0px 5px rgb(159, 1, 234);
 }
 
+ol {
+    list-style: none;
+    counter-reset: album-list;
+}
+
+ol li {
+    counter-increment: album-list;
+}
+
+ol li::before {
+    content: counter(album-list) ". ";
+    font-family: 'Righteous';
+    font-size: 30px;
+    display: flex;
+}
+
 .album-list {
   margin-left: auto;
   margin-right: auto;
