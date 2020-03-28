@@ -280,7 +280,6 @@ ol li::before {
 }
 
 .album-year {
-<<<<<<< HEAD
     margin-left: 7px;
     font-style: italic;
 }
@@ -289,83 +288,7 @@ ol li::before {
     margin-left: 7px;
     font-style: italic;
     text-transform: capitalize;
-}
-
-@media screen and (max-width: 700px){   
-    
-    * {
-        font-size: 15px;
-        
-    }
-    
-    a {
-        font-size: 13px;
-        
-        
-    }
-    h1 {
-        font-size: 90px;
-        
-    }
-    
-    h2 {
-        font-size: 40px;
-        
-    }
-    
-    h3 {
-        font-size: 30px;
-        
-        
-    }
-    .sub-head {
-        font-size: 10px;
-        
-    }
-    
-    .user-profile {
-        font-size: 10px;
-        
-    }
-    
-    .header-button {
-        font-size: 15px;
-        
-    }
-    .site-search input {
-        width: 185px;
-        border-radius: 10px;
-        padding: 2px;
-    }
-    .site-search button {
-        width: 30px;
-        
-    }
-    .new-rec {
-        font-size: 15px;
-        
-     }
-     .album-list {
-        width: 90%;
-        
-    }
-    .album {
-        width: 200%;
-      
-    }
-  
- 
-    
-
-   
-
-
-    
-=======
-  margin-left: 7px;
-  font-style: italic;
-}
->>>>>>> master
+}    
 
 span.save-album {
   position: absolute;
