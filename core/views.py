@@ -41,7 +41,7 @@ def new_album(request):
 def site_search(request):
     search_str = request.GET.get('site-search')
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-    result = sp.search(q=(search_str), type='album', limit=50)
+    result = sp.search(q=(search_str), type='album,artist', limit=25)
     return result
 
 def search_results(request):
@@ -60,5 +60,8 @@ def search_results(request):
     context = {'all_albums': all_albums}
     return render(request, 'core/search_results.html', context=context)
 
-
+def delete_album(request, pk): 
+    album = get_object_or_404(Album, pk=pk)
+    album.delete()
+    return redirect ('rec-list')
 
