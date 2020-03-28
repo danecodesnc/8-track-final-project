@@ -4,98 +4,95 @@
   box-sizing: border-box;
 }
 
-
 body {
-    background-color: rgb(53, 54, 58);
-    font-family: 'Nunito';
-    color: rgb(93, 95, 100);
-    
+  background-color: rgb(53, 54, 58);
+  font-family: "Nunito";
+  color: rgb(93, 95, 100);
 }
 
 a {
-    text-emphasis: none;
-    text-decoration: none;
-    color: rgb(93, 95, 150);
-    
+  text-emphasis: none;
+  text-decoration: none;
+  color: rgb(93, 95, 150);
 }
 
 .header {
-    background: linear-gradient(black, black, rgb(26, 26, 26));
-    height: max-content;
-    contain: content;
-    
+  background: linear-gradient(black, black, rgb(26, 26, 26));
+  height: max-content;
+  contain: content;
 }
 
 h1 {
-    color: white;
-    background-color: black;
-    font-size: 100px;
-    font-family: 'Righteous';
-    
+  color: white;
+  background-color: black;
+  font-size: 100px;
+  font-family: "Righteous";
 }
 
 h2 {
-    font-size: 50px;
-    font-family: 'Righteous';
-    margin-bottom: 20px;
-   
+  font-size: 50px;
+  font-family: "Righteous";
+  margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 30px;
-    font-family: 'Righteous';
-    
+  font-size: 30px;
+  font-family: "Righteous";
 }
 
 hr {
-    border-color: gray;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    clear: both;
-    display: grid
+  border-color: gray;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  clear: both;
+  display: grid;
 }
 
 h1::before {
-    content: '8-TRACK';
-    position: absolute;
-    mix-blend-mode: difference;
-    filter: blur(3px);
-    display: grid
+  content: "8-TRACK";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(3px);
+  display: grid;
 }
 
 .neon-wrapper {
-    display: inline-flex;
-    filter: brightness(200%);
-    overflow: hidden;
-    margin: 1rem;
-    margin-bottom: 0px;
-    display: grid
+  display: inline-flex;
+  filter: brightness(200%);
+  overflow: hidden;
+  margin: 1rem;
+  margin-bottom: 0px;
+  display: grid;
 }
 
 .gradient {
-    background: linear-gradient(113.83124106282105deg, rgba(244, 72, 105,1) 4.927083333333334%,rgba(159, 1, 234,1) 97.84374999999999%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: multiply;
-    display: grid
+  background: linear-gradient(
+    113.83124106282105deg,
+    rgba(244, 72, 105, 1) 4.927083333333334%,
+    rgba(159, 1, 234, 1) 97.84374999999999%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  display: grid;
 }
 
 .dodge {
-    background: radial-gradient(circle,white,black 35%) center / 25% 25%;
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-    mix-blend-mode: color-dodge;
-    animation: dodge-area 10s linear infinite;
-    display: grid
+  background: radial-gradient(circle, white, black 35%) center / 25% 25%;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-dodge;
+  animation: dodge-area 10s linear infinite;
+  display: grid;
 }
 
 @keyframes dodge-area {
@@ -105,13 +102,13 @@ h1::before {
 }
 
 .sub-head {
-    margin-left: 25px;
-    font-family: 'Righteous';
-    font-size: 20px;
-    text-shadow: 0px 0px 5px rgba(244, 72, 105,1);
-    -webkit-text-stroke-width: 0.01px;
-    -webkit-text-stroke-color: white;
-    display: grid
+  margin-left: 25px;
+  font-family: "Righteous";
+  font-size: 20px;
+  text-shadow: 0px 0px 5px rgba(244, 72, 105, 1);
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: white;
+  display: grid;
 }
 
 .user-profile {
@@ -225,7 +222,7 @@ h1::before {
   margin-right: auto;
   margin-left: auto;
   contain: content;
-  cursor: pointer;
+  position: relative;
 }
 
 .priority {
@@ -261,81 +258,61 @@ h1::before {
 }
 
 .album-year {
-    margin-left: 7px;
-    font-style: italic;
+  margin-left: 7px;
+  font-style: italic;
 }
 
-@media screen and (max-width: 700px){   
-    
-    * {
-        font-size: 15px;
-        
-    }
-    
-    a {
-        font-size: 13px;
-        
-        
-    }
-    h1 {
-        font-size: 90px;
-        
-    }
-    
-    h2 {
-        font-size: 40px;
-        
-    }
-    
-    h3 {
-        font-size: 30px;
-        
-        
-    }
-    .sub-head {
-        font-size: 10px;
-        
-    }
-    
-    .user-profile {
-        font-size: 10px;
-        
-    }
-    
-    .header-button {
-        font-size: 15px;
-        
-    }
-    .site-search input {
-        width: 185px;
-        border-radius: 10px;
-        padding: 2px;
-    }
-    .site-search button {
-        width: 30px;
-        
-    }
-    .new-rec {
-        font-size: 15px;
-        
-     }
-     .album-list {
-        width: 90%;
-        
-    }
-    .album {
-        width: 200%;
-      
-    }
-  
- 
-    
+span.save-album {
+  position: absolute;
+  right: 10%;
+  cursor: pointer;
+}
 
-   
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 15px;
+  }
 
+  a {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 90px;
+  }
 
-    
+  h2 {
+    font-size: 40px;
+  }
 
+  h3 {
+    font-size: 30px;
+  }
+  .sub-head {
+    font-size: 10px;
+  }
 
+  .user-profile {
+    font-size: 10px;
+  }
 
+  .header-button {
+    font-size: 15px;
+  }
+  .site-search input {
+    width: 185px;
+    border-radius: 10px;
+    padding: 2px;
+  }
+  .site-search button {
+    width: 30px;
+  }
+  .new-rec {
+    font-size: 15px;
+  }
+  .album-list {
+    width: 90%;
+  }
+  .album {
+    width: 200%;
+  }
 }
