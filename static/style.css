@@ -209,19 +209,19 @@ h1::before {
 }
 
 ol {
-    list-style: none;
-    counter-reset: album-list;
+  list-style: none;
+  counter-reset: album-list;
 }
 
 ol li {
-    counter-increment: album-list;
+  counter-increment: album-list;
 }
 
 ol li::before {
-    content: counter(album-list) ". ";
-    font-family: 'Righteous';
-    font-size: 30px;
-    display: flex;
+  content: counter(album-list) ". ";
+  font-family: "Righteous";
+  font-size: 30px;
+  display: flex;
 }
 
 .album-list {
@@ -239,12 +239,13 @@ ol li::before {
   margin-left: auto;
   contain: content;
   position: relative;
+  pointer-events: none;
 }
 
 .delete-button i {
-    position: absolute;
-    right: 20%;
-    color: rgb(236,	63,	121);
+  position: absolute;
+  right: 20%;
+  color: rgb(236, 63, 121);
 }
 
 .priority {
@@ -280,20 +281,21 @@ ol li::before {
 }
 
 .album-year {
-    margin-left: 7px;
-    font-style: italic;
+  margin-left: 7px;
+  font-style: italic;
 }
 
 .album-type {
-    margin-left: 7px;
-    font-style: italic;
-    text-transform: capitalize;
-}    
+  margin-left: 7px;
+  font-style: italic;
+  text-transform: capitalize;
+}
 
 span.save-album {
   position: absolute;
   right: 10%;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 @media screen and (max-width: 700px) {
