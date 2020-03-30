@@ -21,7 +21,8 @@
         <div class="album">
             <img class="album-cover" src="{{ album.album_cover }}">
             <div class="album-info">
-                <div class="album-title">{{ album.name }}</div>
+                <a href="{% url 'album-detail' %}" class="album-title">{{ album.name }}</a>
+                <!-- <div class='album-title'>{{ album.name}} </div> -->
                 <div class="artist">{{ album.artist }}</div>
                 <div class="album-year">{{ album.release_date }}</div>
             </div>

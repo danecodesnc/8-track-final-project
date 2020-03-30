@@ -288,6 +288,8 @@ ol li::before {
   font-weight: bold;
   font-size: 25px;
   font-style: italic;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .artist {
@@ -321,6 +323,19 @@ span.save-album {
     right: 10%;
     cursor: pointer;
     pointer-events: auto;
+}
+
+.big-album-info {
+    float: left;
+}
+
+.big-title {
+    margin-bottom: 5px;
+}
+
+.big-cover {
+    max-width: 400px;
+    border: 2px solid gray;
 }
 
 @media screen and (max-width: 1200px){
