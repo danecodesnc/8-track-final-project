@@ -67,33 +67,34 @@ def delete_album(request, pk):
     album.delete()
     return redirect ('rec-list')
 
-def grab_data(request):
-    if request.method == "POST":
-        data = request.body.decode('utf-8')
-        body_data = json.loads(data)
-    return body_data
+# def grab_data(request):
+#     if request.method == "POST":
+#         data = request.body.decode('utf-8')
+#         body_data = json.loads(data)
+#         return body_data
 
 @csrf_exempt
 def album_uri(request):
-    # if request.method == "POST":
-    #     data = request.body.decode('utf-8')
-    #     body_data = json.loads(data)
-    search_str = grab_data(request)
-    print('here', search_str)
-    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-    results = sp.search(q=(search_str), type='album,artist', limit=50)
-    albums = results['albums']['items']
-    for album in albums:
-        if album['name'] == search_str:
-            album_uri = album['uri'] 
-    return album_uri
+    if request.method == "POST":
+        data = request.body.decode('utf-8')
+        body_data = json.loads(data)
+        search_str = body_data
+        print('HERE', search_str)
+        sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
+        results = sp.search(q=(search_str), type='album,artist', limit=50)
+        albums = results['albums']['items']
+        for album in albums:
+            if album['name'] == search_str:
+                album_uri = album['uri'] 
+            return album_uri
 
 def get_album_details(request):
     urn = album_uri(request)
-    print(urn)
-    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-    album = sp.album(urn)
-    return album
+    print('here',urn)
+    if urn != None:
+        sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
+        album = sp.album(urn)
+        return album
 
 @csrf_exempt
 def album_detail(request):
