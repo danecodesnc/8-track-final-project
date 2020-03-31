@@ -52,7 +52,8 @@ def search_results(request):
         album_info = {
             'name' : album['name'],
             'artist' : album['artists'][0]['name'],
-            'uri' : album['uri'],
+            'album_uri' : album['uri'],
+            'artist_uri' : album['artists'][0]['uri'],
             'release' : album['release_date'],
             'cover' : album['images'][0],
             'type' : album['album_type'],
