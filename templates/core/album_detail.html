@@ -8,6 +8,9 @@
             <h4 class="album-year">{{ detail_info.release }}</h4>
             <img class="big-cover" src="{{ detail_info.cover.url }}">
         </div>
+            <a href="{{ detail_info.album_link }}" target="_blank">
+            <div class="new-rec">Listen on Spotify</div>
+            </a>
         <div class="track-list">
             {% for track_info in all_tracks %}
             <div class="track">{{track_info.number}}. {{ track_info.title }}</div>

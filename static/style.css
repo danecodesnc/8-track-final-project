@@ -326,13 +326,14 @@ span.save-album {
     pointer-events: auto;
 }
 
-<<<<<<< HEAD
 .big-album-info {
     float: left;
 }
 
 .big-title {
     margin-bottom: 5px;
+    font-style: italic;
+    font-size: 65px;
 }
 
 .big-cover {
@@ -340,8 +341,21 @@ span.save-album {
     border: 2px solid gray;
 }
 
+.track-list {
+    margin: 100px;
+    margin-top: 200px;
+    padding: 30px;
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(37, 35, 41);
+    max-width: max-content;
+    max-height: max-content;
+    position: absolute;
+    right: 18%;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 1200px){
-=======
 .fas.fa-plus-circle {
   color: rgb(236, 63, 121);
 }
@@ -398,7 +412,6 @@ span.save-album {
   * {
     font-size: 15px;
   }
->>>>>>> master
 
   h1 {
     font-size: 150px;
