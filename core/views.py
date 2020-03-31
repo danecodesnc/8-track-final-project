@@ -52,7 +52,7 @@ def search_results(request):
         album_info = {
             'name' : album['name'],
             'artist' : album['artists'][0]['name'],
-            'uri' : album['uri']
+            'uri' : album['uri'],
             'release' : album['release_date'],
             'cover' : album['images'][0],
             'type' : album['album_type'],
@@ -74,23 +74,23 @@ def delete_album(request, pk):
 #         body_data = json.loads(data)
 #         return body_data
 
-@csrf_exempt
-def album_uri(request):
-    if request.method == "POST":
-        data = request.body.decode('utf-8')
-        body_data = json.loads(data)
-        search_str = body_data
-        print('HERE', search_str)
-        sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-        results = sp.search(q=(search_str), type='album,artist', limit=50)
-        albums = results['albums']['items']
-        for album in albums:
-            if album['name'] == search_str:
-                album_uri = album['uri'] 
-            return album_uri
+# @csrf_exempt
+# def album_uri(request):
+#     # if request.method == "POST":
+#     #     data = request.body.decode('utf-8')
+#     #     body_data = json.loads(data)
+#     search_str = 'Leviathan'
+#     print('HERE', search_str)
+#     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
+#     results = sp.search(q=(search_str), type='album,artist', limit=50)
+#     albums = results['albums']['items']
+#     for album in albums:
+#         if album['name'] == search_str:
+#             album_uri = album['uri'] 
+#         return album_uri
 
 def get_album_details(request):
-    urn = album_uri(request)
+    urn = 'spotify:album:6khFoLWnJZDQvZ7Pijym3b'
     print('here',urn)
     if urn != None:
         sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
