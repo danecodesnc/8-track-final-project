@@ -12,6 +12,7 @@ class Album(models.Model):
     added_on = models.DateField(auto_now=True)
     album_cover = models.ImageField(default='default.png')
     users = models.ForeignKey(User, related_name='user', on_delete=models.CASCADE, null=True, blank=True)
+    album_uri = models.CharField(max_length=400, null=True, blank=True)
 
     def __str__(self):
         return f'{self.name}'
