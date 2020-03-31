@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -18,35 +17,28 @@ a {
 }
 
 .header {
-    background: linear-gradient(black, black, rgb(26, 26, 26));
-    height: max-content;
-    contain: content;
-    font-family: 'Righteous';
-    
+  background: linear-gradient(black, black, rgb(26, 26, 26));
+  height: max-content;
+  contain: content;
+  font-family: "Righteous";
 }
 
 h1 {
-    color: white;
-    background-color: black;
-    font-size: 150px;
-    font-family: 'Righteous';
-    
-    
+  color: white;
+  background-color: black;
+  font-size: 150px;
+  font-family: "Righteous";
 }
 
 h2 {
-    font-size: 50px;
-    font-family: 'Righteous';
-    margin-bottom: 20px;
-    
-   
+  font-size: 50px;
+  font-family: "Righteous";
+  margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 50px;
-    font-family: 'Righteous';
-    
-    
+  font-size: 50px;
+  font-family: "Righteous";
 }
 
 hr {
@@ -61,22 +53,20 @@ hr {
 }
 
 h1::before {
-    content: '8-TRACK';
-    position: absolute;
-    mix-blend-mode: difference;
-    filter: blur(3px);
-    display: grid
-    
+  content: "8-TRACK";
+  position: absolute;
+  mix-blend-mode: difference;
+  filter: blur(3px);
+  display: grid;
 }
 
 .neon-wrapper {
-    
-    display: inline-flex;
-    filter: brightness(200%);
-    overflow: hidden;
-    margin: 1rem;
-    margin-bottom: 0px;
-    display: grid
+  display: inline-flex;
+  filter: brightness(200%);
+  overflow: hidden;
+  margin: 1rem;
+  margin-bottom: 0px;
+  display: grid;
 }
 
 .gradient {
@@ -113,15 +103,13 @@ h1::before {
 }
 
 .sub-head {
-    
-    margin-left: 25px;
-    font-family: 'Righteous';
-    font-size: 20px;
-    text-shadow: 0px 0px 20px rgba(244, 72, 105,1);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    display: grid
-    
+  margin-left: 25px;
+  font-family: "Righteous";
+  font-size: 20px;
+  text-shadow: 0px 0px 20px rgba(244, 72, 105, 1);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  display: grid;
 }
 
 .user-profile {
@@ -303,14 +291,14 @@ ol li::before {
 }
 
 .album-year {
-    margin-left: 7px;
-    font-style: italic;
+  margin-left: 7px;
+  font-style: italic;
 }
 
 .album-type {
-    margin-left: 7px;
-    font-style: italic;
-    text-transform: capitalize;
+  margin-left: 7px;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 .fa fa-search {
@@ -322,10 +310,10 @@ ol li::before {
 }
 
 span.save-album {
-    position: absolute;
-    right: 10%;
-    cursor: pointer;
-    pointer-events: auto;
+  position: absolute;
+  right: 10%;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .big-album-info {
@@ -464,84 +452,50 @@ span.save-album {
     font-size: 15px;
   }
 
-  h1 {
-    font-size: 150px;
-    
-  
-  
+  @media screen and (max-width: 1200px) {
+    h1 {
+      font-size: 150px;
+    }
   }
-}
 
   h3 {
     font-size: 40px;
-    
-  
-  
-}
+  }
 
-
-@media screen and (max-width: 750px){   
-    
+  @media screen and (max-width: 750px) {
     * {
-        font-size: 10px;
-        
-        
-        
+      font-size: 10px;
     }
-    
+
     a {
-        font-size: 10px;
-        
-        
-        
-        
+      font-size: 10px;
     }
     h1 {
-        font-size: 80px; 
-        
-        
-        
-        
-        
+      font-size: 80px;
     }
-    
-    h2 {
-        font-size: 40px;
-        position: relative;
-        
-        
-        
-        
-    }
-    
-    h3 {
-        font-size: 30px;
-       
-        
 
-        
-        
+    h2 {
+      font-size: 40px;
+      position: relative;
     }
-   
+
+    h3 {
+      font-size: 30px;
+    }
 
     .sub-head {
       font-size: 10px;
       text-align: left;
-        
-        
-        
     }
-    
+
     .user-profile {
       font-size: 10px;
-        
     }
-    
+
     .header-button {
-      font-size: 15px;  
-        
+      font-size: 15px;
     }
-    
+
     .avatar {
       max-width: 30px;
       border-radius: 50%;
@@ -555,37 +509,28 @@ span.save-album {
       border-radius: 20px;
       padding: 2px;
     }
-    
+
     .site-search button {
-        width: 25px;
-        height: 25px;
-        
+      width: 25px;
+      height: 25px;
     }
     .container {
       width: 100%;
       border-right: 0px solid gray;
       border-left: 0px solid gray;
-      
-    
     }
 
     .new-rec {
-        font-size: 30px;
-        width: 175px;
-        
-        
+      font-size: 30px;
+      width: 175px;
     }
     .album-list {
-        width: 90%;
-        
+      width: 90%;
     }
     .album {
-        width: 200%;
-      
+      width: 200%;
     }
-  
-}
-
+  }
 
   h3 {
     font-size: 30px;

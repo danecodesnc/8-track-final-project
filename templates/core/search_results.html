@@ -3,7 +3,7 @@
   <div class="album-list">
     {% for album_info in all_albums %}
     <a href="#">
-      <div class="album">
+      <div class="album" data-uri="{{album_info.album_uri}}">
         <!-- <div class="priority">1</div> -->
         <span class="save-album"
           ><i class="fas fa-plus-circle" aria-hidden="true"></i
@@ -11,8 +11,12 @@
         <img class="album-cover" src="{{ album_info.cover.url }}" />
 
         <div class="album-info">
-          <div class="album-title">{{ album_info.name }}</div>
-          <div class="artist">{{ album_info.artist }}</div>
+          <div class="album-title">
+            {{ album_info.name }}
+          </div>
+          <div class="artist" data-artist="{{album_info.artist_uri}}">
+            {{ album_info.artist }}
+          </div>
           <div class="album-year">{{ album_info.release }}</div>
           <div class="album-type">{{ album_info.type }}</div>
         </div>
