@@ -36,31 +36,31 @@ let album_cover = document.querySelectorAll(".album-cover");
 //   }
 // }
 
-function album_detail() {
-    let album_titles = document.querySelectorAll('.album-title')
-    for (let title of album_titles) {
-        title.addEventListener("click", function(e) {
-            e.preventDefault();
-            title = e.target.innerText
-            fetch("/album/detail/", {
-                credentials: 'include',
-                method: "POST",
-                headers: {
-                    "Content-Type": "text/html" 
-                },
-                body: JSON.stringify(title)
-            })
-            .then(response => response.text())
-            .then(data => {
-                response = title
-                return response
-            })
-        })
-    }
-}
+// function album_detail() {
+//     let album_titles = document.querySelectorAll('.album-title')
+//     for (let title of album_titles) {
+//         title.addEventListener("click", function(e) {
+//             e.preventDefault();
+//             title = e.target.innerText
+//             fetch("/album/detail/", {
+//                 credentials: 'include',
+//                 method: "POST",
+//                 headers: {
+//                     "Content-Type": "text/html" 
+//                 },
+//                 body: JSON.stringify(title)
+//             })
+//             .then(response => response.text())
+//             .then(data => {
+//                 response = title
+//                 return response
+//             })
+//         })
+//     }
+// }
 
-document.addEventListener("DOMContentLoaded", event => {
-//   saveAlbum();
-  album_detail();
-});
+// document.addEventListener("DOMContentLoaded", event => {
+// //   saveAlbum();
+//   album_detail();
+// });
 
