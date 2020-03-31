@@ -14,7 +14,9 @@
           <div class="album-title">
             {{ album_info.name }}
           </div>
-          <div class="artist">{{ album_info.artist }}</div>
+          <div class="artist" data-artist="{{album_info.artist_uri}}">
+            {{ album_info.artist }}
+          </div>
           <div class="album-year">{{ album_info.release }}</div>
           <div class="album-type">{{ album_info.type }}</div>
         </div>
