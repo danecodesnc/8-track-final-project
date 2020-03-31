@@ -40,35 +40,17 @@ document.addEventListener("DOMContentLoaded", event => {
   saveAlbum();
 });
 
-// // here we add an event listener to div class album
-// for (let album of albums) {
-//   album.addEventListener("click", function(e) {
-//     e.preventDefault();
-//     let album_cover = document.querySelector(".album-cover").src;
-//     console.log(e.target.closest(album_cover));
-//     data = e.target.innerText;
-//     splitData = data.split("\n");
-//     dataObject = {
-//       album_cover,
-//       name: splitData[0],
-//       artist: splitData[1],
-//       release_date: splitData[2]
-//     };
-//     console.log(dataObject);
-//     fetch("/albums/new/", {
-//       method: "POST",
-//       credentials: "include",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(dataObject)
-//     })
-//       .then(response => response.json())
-//       .then(data => {
-//         return response.json();
-//       })
-//       .catch(error => {
-//         //   console.error("Error:", error);
-//       });
-//   });
-// }
+let newRec = document.querySelector(".new-rec");
+
+let test = document.querySelector("#light-box");
+newRec.addEventListener("click", function(e) {
+  e.preventDefault();
+  test.style.display = "block";
+  test.classList.add("search");
+});
+
+let close = document.querySelector("#close");
+close.addEventListener("click", function(e) {
+  e.preventDefault();
+  test.style.display = "none";
+});

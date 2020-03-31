@@ -36,6 +36,7 @@ def new_album(request):
        instance = Album(**data)
        instance.users = request.user
        instance.save()
+       print(data)
        return render(request, 'core/new_album.html',) 
 
 def site_search(request):
