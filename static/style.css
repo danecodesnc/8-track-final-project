@@ -248,6 +248,16 @@ ol li::before {
   pointer-events: none;
 }
 
+.album-block {
+    display: flex;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    contain: content;
+    position: relative;
+    pointer-events: none;
+  }
+
 .delete-button i {
   position: absolute;
   right: 20%;
@@ -277,6 +287,8 @@ ol li::before {
   font-weight: bold;
   font-size: 25px;
   font-style: italic;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .artist {
@@ -284,6 +296,8 @@ ol li::before {
   margin: 7px;
   margin-top: 2px;
   font-size: 18px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .album-year {
@@ -305,6 +319,10 @@ ol li::before {
   padding: 2px;
 }
 
+.fas.fa-plus-circle {
+    color: rgb(236, 63, 121);
+  }
+
 span.save-album {
   position: absolute;
   right: 10%;
@@ -312,33 +330,112 @@ span.save-album {
   pointer-events: auto;
 }
 
+.big-album-info {
+    float: left;
+}
+
+.big-title {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 65px;
+}
+
+.big-cover {
+    max-width: 400px;
+    border: 2px solid gray;
+}
+
+.track-list {
+    /* margin: 100px; */
+    margin-top: 200px;
+    padding: 30px;
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(37, 35, 41);
+    width: 40%;
+    max-height: max-content;
+    position: absolute;
+    right: 5%;
+    border-radius: 20px;
+    color: rgb(180,	36,	120);
+}
+
+.artist-image {
+    width: 400px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+.artist-discography {
+    font-size: 30px;
+}
+
+.discog {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.album-detail {
+    width: 31%;
+    max-height: max-content;
+    contain: content;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Righteous';
+    background-color: rgb(37, 35, 41);
+    color: rgb(180,	36,	120)
+}
+
+.small-cover {
+    border-radius: 50%;
+    max-width: 150px;
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-title {
+  margin: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 1200px){
 .fas.fa-plus-circle {
   color: rgb(236, 63, 121);
 }
 
 #light-box {
-  display: none;
-  max-width: 441px;
-  width: 100%;
-  background: #222;
-  padding: 1rem;
-  margin: 0 auto;
-  border-radius: 0.25rem;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  transition: all 0.5s;
-}
-
-#light-box.search {
-  top: 1%;
-}
-
-#close {
-  cursor: pointer;
-}
+    display: none;
+    max-width: 441px;
+    width: 100%;
+    background: #222;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 0.5s;
+  }
+  
+  #light-box.search {
+    top: 1%;
+  }
+  
+  #close {
+    cursor: pointer;
+  }
 
 .inner input {
   width: 100%;

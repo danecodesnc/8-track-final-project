@@ -9,13 +9,7 @@
             </a>
         </div>
     <hr>
-    <div id="light-box">
-        <span id="close">X</span>
-        <form action="/albums/search/" method="GET" id="site-search" class="inner">
-            <input type="text" name="site-search" placeholder="Search 8-Track" class="light-search">
-            <button id="inner-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-        </form>
-    </div>
+    
     <ol class ="album-list">
         {% for album in albums %}
         <li>
@@ -28,8 +22,9 @@
         <div class="album-block">
             <img class="album-cover" src="{{ album.album_cover }}">
             <div class="album-info">
-                <div class="album-title">{{ album.name }}</div>
-                <div class="artist">{{ album.artist }}</div>
+                <a href="{% url 'album-detail' album.pk %}" class="album-title">{{ album.name }}</a>
+                <!-- <div class='album-title'>{{ album.name}} </div> -->
+                <a href="{% url 'artist-detail' album.pk %} " class="artist">{{ album.artist }}</a>
                 <div class="album-year">{{ album.release_date }}</div>
             </div>
         </div>

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    <div class="container">
+        <div class='big-album-info'>
+            <h2 class="big-title">{{ detail_info.name }}</h2>
+            <h3>{{ detail_info.artist }}</h3>
+            <h4 class="album-year">{{ detail_info.release }}</h4>
+            <img class="big-cover" src="{{ detail_info.cover.url }}">
+        </div>
+            <a href="{{ detail_info.album_link }}" target="_blank">
+            <div class="new-rec">Listen on Spotify</div>
+            </a>
+        <div class="track-list">
+            {% for track_info in all_tracks %}
+            <div class="track">{{track_info.number}}. {{ track_info.title }}</div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}

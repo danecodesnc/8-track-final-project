@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container'>
+    <h2 class='artist-name'>{{ artist_info.name }}</h2>
+    <img class='artist-image' src="{{ artist_info.artist_image.url }}">
+    <a href="{{ artist_info.artist_url }}" target="_blank">
+        <div class="new-rec">View on Spotify</div>
+        </a>
+    <h3 class='artist-discography'>Artist Discography</h3>
+    <div class='discog'>
+        {% for album_info in all_albums %}
+        <div class='album-detail'>
+            <img class='small-cover' src="{{ album_info.album_cover.url }}">
+            <div class='detail-title'>{{ album_info.name }}</div>
+            <div class='album-year'>{{ album_info.release }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
