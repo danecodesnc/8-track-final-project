@@ -324,7 +324,6 @@ span.save-album {
     pointer-events: auto;
 }
 
-<<<<<<< HEAD
 .fas.fa-plus-circle {
   color: rgb(236, 63, 121);
 }
@@ -381,9 +380,6 @@ span.save-album {
   * {
     font-size: 15px;
   }
-=======
-@media screen and (max-width: 1200px){
->>>>>>> 84f8f34acfcc5c4b5bd188fd5e77ec398b2ed924
 
   h1 {
     font-size: 150px;
@@ -519,7 +515,6 @@ span.save-album {
     font-size: 10px;
   }
 
-<<<<<<< HEAD
   .header-button {
     font-size: 15px;
   }
@@ -542,5 +537,3 @@ span.save-album {
     width: 200%;
   }
 }
-=======
->>>>>>> 84f8f34acfcc5c4b5bd188fd5e77ec398b2ed924
