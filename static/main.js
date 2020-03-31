@@ -40,6 +40,7 @@ function album_detail() {
     let album_titles = document.querySelectorAll('.album-title')
     for (let title of album_titles) {
         title.addEventListener("click", function(e) {
+            e.preventDefault();
             title = e.target.innerText
             fetch("/album/detail/", {
                 credentials: 'include',

@@ -118,3 +118,5 @@ def album_detail(request):
     context = {'detail_info' : detail_info, 'all_tracks' : all_tracks}
     return render(request, 'core/album_detail.html', context=context)
     
+
+    
