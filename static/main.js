@@ -1,4 +1,4 @@
-let span = document.querySelectorAll(".save-album");
+let albumSave = document.querySelector(".save-album");
 let albums = document.querySelectorAll(".album");
 let album_cover = document.querySelectorAll(".album-cover");
 
@@ -9,12 +9,16 @@ function saveAlbum() {
       parent = this.closest("div");
       data = this.closest("div").innerText;
       album_cover = parent.querySelector(".album-cover").src;
+      let artist_uri = parent.querySelector(".artist").dataset.artist;
+      album_uri = parent.dataset.uri;
       splitData = data.split("\n");
       dataObject = {
         album_cover,
         name: splitData[1],
         artist: splitData[2],
-        release_date: splitData[3]
+        release_date: splitData[3],
+        album_uri: album_uri,
+        artist_uri: artist_uri
       };
       console.log(dataObject);
       fetch("/albums/new/", {
@@ -38,19 +42,4 @@ function saveAlbum() {
 
 document.addEventListener("DOMContentLoaded", event => {
   saveAlbum();
-});
-
-let newRec = document.querySelector(".new-rec");
-
-let test = document.querySelector("#light-box");
-newRec.addEventListener("click", function(e) {
-  e.preventDefault();
-  test.style.display = "block";
-  test.classList.add("search");
-});
-
-let close = document.querySelector("#close");
-close.addEventListener("click", function(e) {
-  e.preventDefault();
-  test.style.display = "none";
 });
