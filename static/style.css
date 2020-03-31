@@ -298,6 +298,8 @@ ol li::before {
   margin: 7px;
   margin-top: 2px;
   font-size: 18px;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 .album-year {
@@ -342,17 +344,66 @@ span.save-album {
 }
 
 .track-list {
-    margin: 100px;
+    /* margin: 100px; */
     margin-top: 200px;
     padding: 30px;
     font-size: 18px;
     font-style: italic;
     background-color: rgb(37, 35, 41);
-    max-width: max-content;
+    width: 40%;
     max-height: max-content;
     position: absolute;
-    right: 18%;
+    right: 5%;
     border-radius: 20px;
+    color: rgb(180,	36,	120);
+}
+
+.artist-image {
+    width: 400px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+.artist-discography {
+    font-size: 30px;
+}
+
+.discog {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.album-detail {
+    width: 31%;
+    max-height: max-content;
+    contain: content;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Righteous';
+    background-color: rgb(37, 35, 41);
+    color: rgb(180,	36,	120)
+}
+
+.small-cover {
+    border-radius: 50%;
+    max-width: 150px;
+    border: 1px solid gray;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-title {
+  margin: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
+  cursor: pointer;
+  pointer-events: auto;
 }
 
 @media screen and (max-width: 1200px){
