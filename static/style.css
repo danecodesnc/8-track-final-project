@@ -238,7 +238,7 @@ ol li::before {
   margin-top: 10px;
 }
 
-.album-block {
+.album {
   display: flex;
   width: 100%;
   margin-right: auto;
@@ -247,6 +247,16 @@ ol li::before {
   position: relative;
   pointer-events: none;
 }
+
+.album-block {
+    display: flex;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    contain: content;
+    position: relative;
+    pointer-events: none;
+  }
 
 .delete-button i {
   position: absolute;
