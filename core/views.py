@@ -125,7 +125,7 @@ def delete_album(request, pk):
 def album_detail(request, pk):
     albums = Album.objects.all()
     album_detail = Album.objects.get(pk=pk)
-    uri = 'spotify:album:6khFoLWnJZDQvZ7Pijym3b'
+    uri = album_detail.album_uri
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
     album = sp.album(uri)
     detail_info = {
@@ -151,7 +151,7 @@ def album_detail(request, pk):
 def artist_detail(request, pk):
     albums = Album.objects.all()
     albums_detail = Album.objects.get(pk=pk)
-    uri = "spotify:artist:1Dvfqq39HxvCJ3GvfeIFuT"
+    uri = albums_detail.artist_uri
     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
     artist = sp.artist(uri)
     artist_info = {

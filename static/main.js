@@ -14,9 +14,9 @@ function saveAlbum() {
       splitData = data.split("\n");
       dataObject = {
         album_cover,
-        name: splitData[1],
-        artist: splitData[2],
-        release_date: splitData[3],
+        name: splitData[0],
+        artist: splitData[1],
+        release_date: splitData[2],
         album_uri: album_uri,
         artist_uri: artist_uri
       };
