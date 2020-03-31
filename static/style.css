@@ -238,7 +238,7 @@ ol li::before {
   margin-top: 10px;
 }
 
-.album {
+.album-block {
   display: flex;
   width: 100%;
   margin-right: auto;
