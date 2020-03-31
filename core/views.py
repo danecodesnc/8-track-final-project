@@ -91,43 +91,17 @@ def delete_album(request, pk):
 #             album_uri = album['uri'] 
 #         return album_uri
 
-def get_album_details(request):
-    urn = 'spotify:album:6khFoLWnJZDQvZ7Pijym3b'
-    print('here',urn)
-    if urn != None:
-        sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-        album = sp.album(urn)
-        return album
+# def get_album_details(request):
+#     urn = 'spotify:album:6khFoLWnJZDQvZ7Pijym3b'
+#     print('here',urn)
+#     if urn != None:
+#         sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
+#         album = sp.album(urn)
+#         return album
 
-@csrf_exempt
-def album_detail(request):
-    album = get_album_details(request)
-    detail_info = {
-        'name' : album['name'],
-        'artist' : album['artists'][0]['name'],
-        'cover' : album['images'][0],
-        'release' : album['release_date'],
-        'album_link' : album['external_urls']['spotify'],
-    }
-    tracks = album['tracks']['items']
-    all_tracks = []
-    for track in tracks: 
-        track_info = {
-            'title' : track['name'],
-            'number' : track['track_number'],
-            'url' : track['external_urls']['spotify'],
-        }
-        if track_info not in all_tracks:
-            all_tracks.append(track_info)
-    context = {'detail_info' : detail_info, 'all_tracks' : all_tracks}
-    return render(request, 'core/album_detail.html', context=context)
-    
-# def album_detail(request, pk):
-#     albums = Album.objects.all()
-#     album_detail = Album.objects.get(pk=pk)
-#     uri = 'spotify:album:6khFoLWnJZDQvZ7Pijym3b'
-#     sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
-#     album = sp.album(urn)
+# @csrf_exempt
+# def album_detail(request):
+#     album = get_album_details(request)
 #     detail_info = {
 #         'name' : album['name'],
 #         'artist' : album['artists'][0]['name'],
@@ -137,7 +111,7 @@ def album_detail(request):
 #     }
 #     tracks = album['tracks']['items']
 #     all_tracks = []
-#     for track in tracks:
+#     for track in tracks: 
 #         track_info = {
 #             'title' : track['name'],
 #             'number' : track['track_number'],
@@ -147,4 +121,30 @@ def album_detail(request):
 #             all_tracks.append(track_info)
 #     context = {'detail_info' : detail_info, 'all_tracks' : all_tracks}
 #     return render(request, 'core/album_detail.html', context=context)
+    
+def album_detail(request, pk):
+    albums = Album.objects.all()
+    album_detail = Album.objects.get(pk=pk)
+    uri = 'spotify:album:6khFoLWnJZDQvZ7Pijym3b'
+    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
+    album = sp.album(uri)
+    detail_info = {
+        'name' : album['name'],
+        'artist' : album['artists'][0]['name'],
+        'cover' : album['images'][0],
+        'release' : album['release_date'],
+        'album_link' : album['external_urls']['spotify'],
+    }
+    tracks = album['tracks']['items']
+    all_tracks = []
+    for track in tracks:
+        track_info = {
+            'title' : track['name'],
+            'number' : track['track_number'],
+            'url' : track['external_urls']['spotify'],
+        }
+        if track_info not in all_tracks:
+            all_tracks.append(track_info)
+    context = {'detail_info' : detail_info, 'all_tracks' : all_tracks}
+    return render(request, 'core/album_detail.html', context=context)
     
