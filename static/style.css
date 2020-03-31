@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -17,27 +18,35 @@ a {
 }
 
 .header {
-  background: linear-gradient(black, black, rgb(26, 26, 26));
-  height: max-content;
-  contain: content;
+    background: linear-gradient(black, black, rgb(26, 26, 26));
+    height: max-content;
+    contain: content;
+    font-family: 'Righteous';
+    
 }
 
 h1 {
-  color: white;
-  background-color: black;
-  font-size: 100px;
-  font-family: "Righteous";
+    color: white;
+    background-color: black;
+    font-size: 150px;
+    font-family: 'Righteous';
+    
+    
 }
 
 h2 {
-  font-size: 50px;
-  font-family: "Righteous";
-  margin-bottom: 20px;
+    font-size: 50px;
+    font-family: 'Righteous';
+    margin-bottom: 20px;
+    
+   
 }
 
 h3 {
-  font-size: 30px;
-  font-family: "Righteous";
+    font-size: 50px;
+    font-family: 'Righteous';
+    
+    
 }
 
 hr {
@@ -52,20 +61,22 @@ hr {
 }
 
 h1::before {
-  content: "8-TRACK";
-  position: absolute;
-  mix-blend-mode: difference;
-  filter: blur(3px);
-  display: grid;
+    content: '8-TRACK';
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+    display: grid
+    
 }
 
 .neon-wrapper {
-  display: inline-flex;
-  filter: brightness(200%);
-  overflow: hidden;
-  margin: 1rem;
-  margin-bottom: 0px;
-  display: grid;
+    
+    display: inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+    margin: 1rem;
+    margin-bottom: 0px;
+    display: grid
 }
 
 .gradient {
@@ -91,7 +102,7 @@ h1::before {
   right: 0;
   bottom: 0;
   mix-blend-mode: color-dodge;
-  animation: dodge-area 10s linear infinite;
+  animation: dodge-area 15s linear infinite;
   display: grid;
 }
 
@@ -102,13 +113,15 @@ h1::before {
 }
 
 .sub-head {
-  margin-left: 25px;
-  font-family: "Righteous";
-  font-size: 20px;
-  text-shadow: 0px 0px 5px rgba(244, 72, 105, 1);
-  -webkit-text-stroke-width: 0.01px;
-  -webkit-text-stroke-color: white;
-  display: grid;
+    
+    margin-left: 25px;
+    font-family: 'Righteous';
+    font-size: 20px;
+    text-shadow: 0px 0px 20px rgba(244, 72, 105,1);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    display: grid
+    
 }
 
 .user-profile {
@@ -167,21 +180,25 @@ h1::before {
 }
 
 .site-search input {
-  width: 200px;
-  border-radius: 10px;
+  font-size: 15px;
+  width: 225px;
+  height: 20px;
+  border-radius: 20px;
   padding: 2px;
   position: relative;
 }
 
 .site-search button {
   width: 20px;
+  height: 20px;
+  border-radius: 5px;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  width: 65%;
+  width: 55%;
   border-right: 1px solid gray;
   border-left: 1px solid gray;
   padding: 10px;
@@ -282,23 +299,32 @@ ol li::before {
 }
 
 .album-year {
-  margin-left: 7px;
-  font-style: italic;
+    margin-left: 7px;
+    font-style: italic;
 }
 
 .album-type {
-  margin-left: 7px;
-  font-style: italic;
-  text-transform: capitalize;
+    margin-left: 7px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.fa fa-search {
+  font-size: 20px;
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 2px;
 }
 
 span.save-album {
-  position: absolute;
-  right: 10%;
-  cursor: pointer;
-  pointer-events: auto;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
+<<<<<<< HEAD
 .fas.fa-plus-circle {
   color: rgb(236, 63, 121);
 }
@@ -355,17 +381,132 @@ span.save-album {
   * {
     font-size: 15px;
   }
+=======
+@media screen and (max-width: 1200px){
+>>>>>>> 84f8f34acfcc5c4b5bd188fd5e77ec398b2ed924
 
-  a {
-    font-size: 13px;
-  }
   h1 {
-    font-size: 90px;
+    font-size: 150px;
+    
+  
+  
   }
+}
 
-  h2 {
+  h3 {
     font-size: 40px;
-  }
+    
+  
+  
+}
+
+
+@media screen and (max-width: 750px){   
+    
+    * {
+        font-size: 10px;
+        
+        
+        
+    }
+    
+    a {
+        font-size: 10px;
+        
+        
+        
+        
+    }
+    h1 {
+        font-size: 80px; 
+        
+        
+        
+        
+        
+    }
+    
+    h2 {
+        font-size: 40px;
+        position: relative;
+        
+        
+        
+        
+    }
+    
+    h3 {
+        font-size: 30px;
+       
+        
+
+        
+        
+    }
+   
+
+    .sub-head {
+      font-size: 10px;
+      text-align: left;
+        
+        
+        
+    }
+    
+    .user-profile {
+      font-size: 10px;
+        
+    }
+    
+    .header-button {
+      font-size: 15px;  
+        
+    }
+    
+    .avatar {
+      max-width: 30px;
+      border-radius: 50%;
+      border: 1px solid rgb(158, 158, 158);
+    }
+
+    .site-search input {
+      font-size: 15px;
+      width: 200px;
+      height: 30px;
+      border-radius: 20px;
+      padding: 2px;
+    }
+    
+    .site-search button {
+        width: 25px;
+        height: 25px;
+        
+    }
+    .container {
+      width: 100%;
+      border-right: 0px solid gray;
+      border-left: 0px solid gray;
+      
+    
+    }
+
+    .new-rec {
+        font-size: 30px;
+        width: 175px;
+        
+        
+    }
+    .album-list {
+        width: 90%;
+        
+    }
+    .album {
+        width: 200%;
+      
+    }
+  
+}
+
 
   h3 {
     font-size: 30px;
@@ -378,6 +519,7 @@ span.save-album {
     font-size: 10px;
   }
 
+<<<<<<< HEAD
   .header-button {
     font-size: 15px;
   }
@@ -400,3 +542,5 @@ span.save-album {
     width: 200%;
   }
 }
+=======
+>>>>>>> 84f8f34acfcc5c4b5bd188fd5e77ec398b2ed924
