@@ -170,6 +170,7 @@ h1::before {
   width: 200px;
   border-radius: 10px;
   padding: 2px;
+  position: relative;
 }
 
 .site-search button {
@@ -298,6 +299,58 @@ span.save-album {
   pointer-events: auto;
 }
 
+.fas.fa-plus-circle {
+  color: rgb(236, 63, 121);
+}
+
+#light-box {
+  display: none;
+  max-width: 441px;
+  width: 100%;
+  background: #222;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  transition: all 0.5s;
+}
+
+#light-box.search {
+  top: 1%;
+}
+
+#close {
+  cursor: pointer;
+}
+
+.inner input {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  border: solid 1px #e5e5e5;
+  border-radius: 0.25rem;
+}
+
+#inner-btn {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  bottom: 25%;
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#inner-btn:hover {
+  color: #222;
+}
+
 @media screen and (max-width: 700px) {
   * {
     font-size: 15px;
@@ -332,6 +385,7 @@ span.save-album {
     width: 185px;
     border-radius: 10px;
     padding: 2px;
+    position: relative;
   }
   .site-search button {
     width: 30px;
