@@ -5,16 +5,15 @@ let album_cover = document.querySelectorAll(".album-cover");
 function saveAlbum() {
   albumList.addEventListener("click", function(e) {
     e.preventDefault();
-    let info = e.target.querySelector(".album-info");
-    let dataUri = info.dataset.uri;
-    let artistUri = document.querySelector(".artist").dataset.artist;
-    console.log("here", artistUri);
-    album_cover = info.previousElementSibling.src;
+    let album = e.target.querySelector(".album");
+    let dataUri = album.dataset.uri;
+    let artistUri = album.querySelector(".artist").dataset.artist;
+    album_cover = album.querySelector("img").src;
     dataObject = {
       album_cover,
-      name: info.querySelector(".album-title").textContent.trim(),
-      artist: info.querySelector(".artist").textContent.trim(),
-      release_date: info.querySelector(".album-year").textContent,
+      name: album.querySelector(".album-title").textContent.trim(),
+      artist: album.querySelector(".artist").textContent.trim(),
+      release_date: album.querySelector(".album-year").textContent,
       album_uri: dataUri,
       artist_uri: artistUri
     };
