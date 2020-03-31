@@ -36,6 +36,7 @@ def new_album(request):
        instance = Album(**data)
        instance.users = request.user
        instance.save()
+       print(data)
        return render(request, 'core/new_album.html',) 
 
 def site_search(request):
@@ -52,7 +53,12 @@ def search_results(request):
         album_info = {
             'name' : album['name'],
             'artist' : album['artists'][0]['name'],
+<<<<<<< HEAD
             'uri' : album['uri'],
+=======
+            'album_uri' : album['uri'],
+            'artist_uri' : album['artists'][0]['uri'],
+>>>>>>> master
             'release' : album['release_date'],
             'cover' : album['images'][0],
             'type' : album['album_type'],

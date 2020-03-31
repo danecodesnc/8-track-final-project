@@ -4,11 +4,18 @@
     <div class="container">
         <div class="list-head">
             <h2>REC. LIST</h2>
-            <a href="{% url 'new-album' %}">
+            <a href="#">
             <div class="new-rec">New Rec. +</div>
             </a>
         </div>
     <hr>
+    <div id="light-box">
+        <span id="close">X</span>
+        <form action="/albums/search/" method="GET" id="site-search" class="inner">
+            <input type="text" name="site-search" placeholder="Search 8-Track" class="light-search">
+            <button id="inner-btn" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </div>
     <ol class ="album-list">
         {% for album in albums %}
         <li>
