@@ -414,28 +414,28 @@ span.save-album {
 }
 
 #light-box {
-  display: none;
-  max-width: 441px;
-  width: 100%;
-  background: #222;
-  padding: 1rem;
-  margin: 0 auto;
-  border-radius: 0.25rem;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%);
-  transition: all 0.5s;
-}
-
-#light-box.search {
-  top: 1%;
-}
-
-#close {
-  cursor: pointer;
-}
+    display: none;
+    max-width: 441px;
+    width: 100%;
+    background: #222;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 0.5s;
+  }
+  
+  #light-box.search {
+    top: 1%;
+  }
+  
+  #close {
+    cursor: pointer;
+  }
 
 .inner input {
   width: 100%;
