@@ -40,6 +40,7 @@ def search_results(request):
     search = site_search(request)
     albums = search['albums']['items']
     all_albums = []
+    names = []
     for album in albums:
         all_tracks = []
         album_info = {
@@ -52,8 +53,9 @@ def search_results(request):
             'type' : album['album_type'],
             'tracks' : all_tracks,
         }
-        if album_info not in all_albums:
+        if album_info['name'] not in names:
             all_albums.append(album_info)
+            names.append(album_info['name'])
         uri = album_info['album_uri']
         sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
         album_details = sp.album(uri)
@@ -67,7 +69,7 @@ def search_results(request):
             if track_info not in all_tracks:
                 all_tracks.append(track_info)
     context = {'all_albums': all_albums}
-    pprint.pprint(context)
+    # pprint.pprint(context)
     return render(request, 'core/search_results.html', context=context)
 
 def delete_album(request, pk): 
@@ -115,6 +117,7 @@ def artist_detail(request, pk):
     artist_discog = sp.artist_albums(uri)
     artist_albums = artist_discog['items']
     all_albums = []
+    names = []
     for album in artist_albums:
         album_info = {
             'album_url' : album['external_urls']['spotify'],
@@ -124,8 +127,9 @@ def artist_detail(request, pk):
             'type' : album['type'],
             'album_uri' : album['uri'],
         }
-        if album_info not in all_albums:
+        if album_info['name'] not in names:
             all_albums.append(album_info)
+            names.append(album_info['name'])
     context = {'artist_info' : artist_info, 'all_albums' : all_albums, 'albums' : album, 'album_detail' : album_detail}
     return render(request, 'core/artist_detail.html', context=context)
     
