@@ -311,6 +311,13 @@ ol li::before {
   text-transform: capitalize;
 }
 
+.search-tracks {
+    margin: 10px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-style: italic;
+}
+
 .fa fa-search {
   font-size: 20px;
   width: 300px;

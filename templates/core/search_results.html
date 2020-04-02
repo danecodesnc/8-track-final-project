@@ -2,7 +2,6 @@
 <body>
   <div class="album-list">
     {% for album_info in all_albums %}
-    <a href="#">
       <div class="album" data-uri="{{album_info.album_uri}}">
         <!-- <div class="priority">1</div> -->
         <span class="save-album"
@@ -20,11 +19,12 @@
           <div class="album-year">{{ album_info.release }}</div>
           <div class="album-type">{{ album_info.type }}</div>
         </div>
-        <!-- {% for track in album_info.tracks %}
-        <div class="track">{{track.number}}. {{ track.title }}</div>
-        {% endfor %} -->
       </div>
-    </a>
+      <div class="search-tracks">
+        {% for track in album_info.tracks %}
+            <a href="{{ track.url }}" targe="_blank" class="track">{{track.number}}. {{ track.title }}</a>
+        {% endfor %}
+      </div>
     <hr />
     {% endfor %}
   </div>

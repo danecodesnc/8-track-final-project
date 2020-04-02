@@ -28,7 +28,7 @@ def new_album(request):
        instance.users = request.user
        instance.save()
        print(data)
-       return render(request, 'core/new_album.html',) 
+       
 
 def site_search(request):
     search_str = request.GET.get('site-search')
