@@ -13,6 +13,10 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import sys
 import pprint
 
+client_id = '26b8ce1fe9a140f8a1867a55b7c0118e'
+client_secret = 'e8576337c58449e48270f0b90c1d8714'
+sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id=client_id, client_secret=client_secret))
+
 @login_required
 def rec_list(request):
     albums = Album.objects.filter(users=request.user)
@@ -32,7 +36,6 @@ def new_album(request):
 
 def site_search(request):
     search_str = request.GET.get('site-search')
-    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
     result = sp.search(q=(search_str), type='album,artist', limit=25)
     return result
 
@@ -57,7 +60,6 @@ def search_results(request):
             all_albums.append(album_info)
             names.append(album_info['name'])
         uri = album_info['album_uri']
-        sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
         album_details = sp.album(uri)
         tracks = album_details['tracks']['items']
         for track in tracks:
@@ -81,7 +83,6 @@ def album_detail(request, pk):
     albums = Album.objects.all()
     album_detail = Album.objects.get(pk=pk)
     uri = album_detail.album_uri
-    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
     album = sp.album(uri)
     detail_info = {
         'name' : album['name'],
@@ -107,7 +108,6 @@ def artist_detail(request, pk):
     albums = Album.objects.all()
     albums_detail = Album.objects.get(pk=pk)
     uri = albums_detail.artist_uri
-    sp = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id='26b8ce1fe9a140f8a1867a55b7c0118e', client_secret='e8576337c58449e48270f0b90c1d8714'))
     artist = sp.artist(uri)
     artist_info = {
         'artist_url' : artist['external_urls']['spotify'],
