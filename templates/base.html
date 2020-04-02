@@ -8,15 +8,17 @@
     <script src="{% static 'main.js' %}" defer></script>
     <link
       href="https://fonts.googleapis.com/css?family=Nunito|Righteous&display=swap"
-      rel="stylesheet"/>
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/a902152cf6.js"
       crossorigin="anonymous"
-      defer>
-    </script>
+      defer
+    ></script>
     {% block title %}
     <title>8-Track</title>
     {% endblock %}
@@ -36,10 +38,10 @@
       <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
     </div>
     <div class="site-search">
-        <form action="/albums/search/" method="GET" id="site-search">
-            <input type="text" name="site-search" placeholder="Search 8-Track">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+      <form action="/albums/search/" method="GET" id="site-search">
+        <input type="text" name="site-search" placeholder="Search 8-Track" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </div>
     <div class="user-profile">
       <a class="header-button" href="/">
@@ -50,7 +52,7 @@
       </a>
     </div>
   </header>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.1/Sortable.min.js"></script>
   <body>
     {% block content %} {% endblock %}
   </body>
