@@ -313,7 +313,7 @@ ol li::before {
 
 .search-tracks {
     margin: 10px;
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     font-style: italic;
 }
