@@ -186,7 +186,7 @@ h1::before {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  width: 55%;
+  width: 57%;
   border-right: 1px solid gray;
   border-left: 1px solid gray;
   padding: 10px;
@@ -200,12 +200,12 @@ h1::before {
 
 .new-rec {
   font-family: "Righteous";
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  right: 10px;
+  right: 6px;
   top: 10px;
   color: white;
   background-color: rgb(244, 72, 105);
@@ -233,7 +233,7 @@ ol li::before {
 .album-list {
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 80%;
   padding: 5px;
   margin-top: 10px;
 }
@@ -289,6 +289,7 @@ ol li::before {
   font-style: italic;
   cursor: pointer;
   pointer-events: auto;
+  
 }
 
 .artist {
@@ -298,6 +299,7 @@ ol li::before {
   font-size: 18px;
   cursor: pointer;
   pointer-events: auto;
+  
 }
 
 .album-year {
@@ -344,7 +346,8 @@ span.save-album {
 .big-title {
     margin-bottom: 5px;
     font-style: italic;
-    font-size: 65px;
+    font-size: 60px;
+    
 }
 
 .big-cover {
@@ -354,7 +357,7 @@ span.save-album {
 
 .track-list {
     /* margin: 100px; */
-    margin-top: 200px;
+    margin-top: 175px;
     padding: 30px;
     font-size: 18px;
     font-style: italic;
@@ -364,7 +367,7 @@ span.save-album {
     position: absolute;
     right: 5%;
     border-radius: 20px;
-    color: rgb(180,	36,	120);
+    color:white;
 }
 
 .artist-image {
@@ -415,174 +418,673 @@ span.save-album {
   pointer-events: auto;
 }
 
-@media screen and (max-width: 1200px){
-.fas.fa-plus-circle {
-  color: rgb(236, 63, 121);
-}
 
-#light-box {
-    display: none;
-    max-width: 441px;
-    width: 100%;
-    background: #222;
-    padding: 1rem;
-    margin: 0 auto;
-    border-radius: 0.25rem;
-    text-align: center;
+
+
+
+
+
+
+@media screen and (max-width: 1400px){
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(53, 54, 58);
+    font-family: "Nunito";
+    color: rgb(93, 95, 100);
+  }
+  
+  a {
+    text-emphasis: none;
+    text-decoration: none;
+    color: rgb(93, 95, 150);
+  }
+  
+  .header {
+    background: linear-gradient(black, black, rgb(26, 26, 26));
+    height: max-content;
+    contain: content;
+    font-family: "Righteous";
+  }
+  
+  h1 {
+    color: white;
+    background-color: black;
+    font-size: 150px;
+    font-family: "Righteous";
+  }
+  
+  h2 {
+    font-size: 50px;
+    font-family: "Righteous";
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 50px;
+    font-family: "Righteous";
+  }
+  
+  hr {
+    border-color: gray;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    clear: both;
+    display: grid;
+  }
+  
+  h1::before {
+    content: "8-TRACK";
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+    display: grid;
+  }
+  
+  .neon-wrapper {
+    display: inline-flex;
+    filter: brightness(200%);
+    overflow: hidden;
+    margin: 1rem;
+    margin-bottom: 0px;
+    display: grid;
+  }
+  
+  .gradient {
+    background: linear-gradient(
+      113.83124106282105deg,
+      rgba(244, 72, 105, 1) 4.927083333333334%,
+      rgba(159, 1, 234, 1) 97.84374999999999%
+    );
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    transition: all 0.5s;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    display: grid;
   }
   
-  #light-box.search {
-    top: 1%;
+  .dodge {
+    background: radial-gradient(circle, white, black 35%) center / 25% 25%;
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: color-dodge;
+    animation: dodge-area 15s linear infinite;
+    display: grid;
   }
   
-  #close {
+  @keyframes dodge-area {
+    to {
+      transform: translate(50%, 50%);
+    }
+  }
+  
+  .sub-head {
+    margin-left: 25px;
+    font-family: "Righteous";
+    font-size: 20px;
+    text-shadow: 0px 0px 20px rgba(244, 72, 105, 1);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    display: grid;
+  }
+  
+  .user-profile {
+    display: inline-block;
+    margin-top: 5px;
+    margin: 15px;
+  }
+  
+  .header-button {
+    color: rgb(173, 173, 173);
+    text-emphasis: none;
+    text-decoration: none;
+  }
+  
+  .header-button:hover {
+    font-weight: bolder;
+  }
+  
+  .avatar {
+    max-width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(158, 158, 158);
+  }
+  
+  .links {
+    display: flex;
+  }
+  
+  .lists {
+    margin-left: 5px;
+  }
+  
+  .log {
+    margin-left: 5px;
+  }
+  
+  .login-logout {
+    margin: 2px;
+  }
+  
+  .login-out-container {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+  
+  .site-search {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    margin-right: 5px;
+  }
+  
+  .site-search input {
+    font-size: 15px;
+    width: 225px;
+    height: 20px;
+    border-radius: 20px;
+    padding: 2px;
+    position: relative;
+  }
+  
+  .site-search button {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+  
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width: 60%;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 5px;
+    contain: content;
+    
+  }
+  
+  .list-head {
+    display: flex;
+    contain: content;
+  }
+  
+  .new-rec {
+    font-family: "Righteous";
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    background-color: rgb(244, 72, 105);
+    border-radius: 20px;
+    padding: 10px;
+    text-shadow: 0px 0px 5px rgb(159, 1, 234);
+  }
+  
+  ol {
+    list-style: none;
+    counter-reset: album-list;
+  }
+  
+  ol li {
+    counter-increment: album-list;
+  }
+  
+  ol li::before {
+    content: counter(album-list) ". ";
+    font-family: "Righteous";
+    font-size: 30px;
+    display: flex;
+  }
+  
+  .album-list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding: 5px;
+    margin-top: 10px;
+    
+  }
+  
+  .album {
+    display: flex;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    contain: content;
+    position: relative;
+    pointer-events: none;
+  }
+  
+  .album-block {
+      display: flex;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      contain: content;
+      position: relative;
+      pointer-events: none;
+    }
+  
+  .delete-button i {
+    position: absolute;
+    right: 20%;
+    color: rgb(236, 63, 121);
+  }
+  
+  .priority {
+    font-family: "Righteous";
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .album-cover {
+    max-width: 150px;
+    border: 1px solid gray;
+  }
+  
+  .album-info {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .album-title {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
     cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .artist {
+    display: block;
+    margin: 7px;
+    margin-top: 2px;
+    font-size: 18px;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .album-year {
+    margin-left: 7px;
+    font-style: italic;
+  }
+  
+  .album-type {
+    margin-left: 7px;
+    font-style: italic;
+    text-transform: capitalize;
+  }
+  
+  .fa fa-search {
+    font-size: 20px;
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+    padding: 2px;
+  }
+  
+  .fas.fa-plus-circle {
+      color: rgb(236, 63, 121);
+    }
+  
+  span.save-album {
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .big-album-info {
+      float: left;
+      
+  }
+  
+  .big-title {
+      margin-bottom: 5px;
+      font-style: italic;
+      font-size: 40px;
+  }
+  
+  .big-cover {
+      max-width: 400px;
+      border: 2px solid gray;
+  }
+  
+  .track-list {
+      /* margin: 100px; */
+      margin-top: 100px;
+      padding: 20px;
+      font-size: 20px;
+      font-style: italic;
+      background-color: rgb(37, 35, 41);
+      width: 30%;
+      max-height: max-content;
+      position: absolute;
+      right: 5%;
+      border-radius: 20px;
+      color:white;
+  }
+  
+  .artist-image {
+      width: 400px;
+      border-radius: 50%;
+      border: 2px solid gray;
+  }
+  
+  .artist-discography {
+      font-size: 30px;
+  }
+  
+  .discog {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .album-detail {
+      width: 31%;
+      max-height: max-content;
+      contain: content;
+      border: 1px solid gray;
+      border-radius: 20px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Righteous';
+      background-color: rgb(37, 35, 41);
+      color: rgb(180,	36,	120)
+  }
+  
+  .small-cover {
+      border-radius: 50%;
+      max-width: 150px;
+      border: 1px solid gray;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .detail-title {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    font-style: italic;
+    cursor: pointer;
+    pointer-events: auto;
   }
 
-.inner input {
-  width: 100%;
-  position: relative;
-  padding: 10px;
-  border: solid 1px #e5e5e5;
-  border-radius: 0.25rem;
-}
 
-#inner-btn {
-  position: absolute;
-  right: 20px;
-  font-size: 20px;
-  background: none;
-  border: none;
-  bottom: 25%;
-  color: #ccc;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  @media screen and (max-width: 1050px) {
+  
+    * {
+      font-size: 15px;
+    }
+  
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+      width: 80%;
+      border-right: 1px solid gray;
+      border-left: 1px solid gray;
+      padding: 5px;
+      contain: content;
+      
+    }
+  
+    h1 {
+      color: white;
+      background-color: black;
+      font-size: 95px;
+      font-family: "Righteous";
+    }
+  
+    h3 {
+      font-size: 40px;
+      font-family: "Righteous";
+    }
+  
+    .new-rec {
+      font-family: "Righteous";
+      font-size: 5px;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: white;
+      background-color: rgb(244, 72, 105);
+      border-radius: 20px;
+      padding: 10px;
+      text-shadow: 0px 0px 5px rgb(159, 1, 234);
+    }
+  
+    .big-cover {
+      max-width: 300px;
+      border: 2px solid gray;
+    }
+    
+    .track-list {
+      /* margin: 100px; */
+      margin-top: 100px;
+      margin-right: -10px;
+      padding: 30px;
+      font-size: 18px;
+      font-style: italic;
+      background-color: rgb(37, 35, 41);
+      width: 40%;
+      max-height: max-content;
+      position: absolute;
+      right: 5%;
+      border-radius: 10px;
+      color:white;
+    }
+  
+    .big-title {
+      margin-bottom: 5px;
+      font-style: italic;
+      font-size: 40px;
+      
+    }
+  
+    .new-rec {
+      font-family: "Righteous";
+      font-size: 15px;
+      width: 20%;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 1%;
+      top: 15px;
+      color: white;
+      background-color: rgb(244, 72, 105);
+      border-radius: 20px;
+      padding: 10px;
+      text-shadow: 0px 0px 5px rgb(159, 1, 234);
+    }
+  
+    .delete-button i {
+      position: absolute;
+      right: 5%;
+      color: rgb(236, 63, 121);
+    }
+  
+    .album-detail {
+      width: 30%;
+      max-height: max-content;
+      contain: content;
+      border: 1px solid gray;
+      border-radius: 20px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Righteous';
+      background-color: rgb(37, 35, 41);
+      color: white
+  }
+  
+  .big-cover {
+    max-width: 280px;
+    border: 2px solid gray;
+  }
+  
 
-#inner-btn:hover {
-  color: #222;
-}
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+  
   * {
     font-size: 15px;
   }
 
-  @media screen and (max-width: 1200px) {
-    h1 {
-      font-size: 150px;
-    }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    width: 100%;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 5px;
+    contain: content;
+    
+  }
+
+  h1 {
+    color: white;
+    background-color: black;
+    font-size: 95px;
+    font-family: "Righteous";
   }
 
   h3 {
     font-size: 40px;
+    font-family: "Righteous";
   }
 
-  @media screen and (max-width: 750px) {
-    * {
-      font-size: 10px;
-    }
-
-    a {
-      font-size: 10px;
-    }
-    h1 {
-      font-size: 80px;
-    }
-
-    h2 {
-      font-size: 40px;
-      position: relative;
-    }
-
-    h3 {
-      font-size: 30px;
-    }
-
-    .sub-head {
-      font-size: 10px;
-      text-align: left;
-    }
-
-    .user-profile {
-      font-size: 10px;
-    }
-
-    .header-button {
-      font-size: 15px;
-    }
-
-    .avatar {
-      max-width: 30px;
-      border-radius: 50%;
-      border: 1px solid rgb(158, 158, 158);
-    }
-
-    .site-search input {
-      font-size: 15px;
-      width: 200px;
-      height: 30px;
-      border-radius: 20px;
-      padding: 2px;
-    }
-
-    .site-search button {
-      width: 25px;
-      height: 25px;
-    }
-    .container {
-      width: 100%;
-      border-right: 0px solid gray;
-      border-left: 0px solid gray;
-    }
-
-    .new-rec {
-      font-size: 30px;
-      width: 175px;
-    }
-    .album-list {
-      width: 90%;
-    }
-    .album {
-      width: 200%;
-    }
-  }
-
-  h3 {
-    font-size: 30px;
-  }
-  .sub-head {
-    font-size: 10px;
-  }
-
-  .user-profile {
-    font-size: 10px;
-  }
-
-  .header-button {
-    font-size: 15px;
-  }
-  .site-search input {
-    width: 185px;
-    border-radius: 10px;
-    padding: 2px;
-    position: relative;
-  }
-  .site-search button {
-    width: 30px;
-  }
   .new-rec {
-    font-size: 15px;
+    font-family: "Righteous";
+    font-size: 5px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    background-color: rgb(244, 72, 105);
+    border-radius: 20px;
+    padding: 10px;
+    text-shadow: 0px 0px 5px rgb(159, 1, 234);
   }
-  .album-list {
-    width: 90%;
+
+  .big-cover {
+    max-width: 300px;
+    border: 2px solid gray;
   }
-  .album {
-    width: 200%;
+  
+  .track-list {
+    /* margin: 100px; */
+    margin-top: 110px;
+    margin-right: -10px;
+    padding: 15px;
+    font-size: 5px;
+    font-style: italic;
+    background-color: rgb(37, 35, 41);
+    width: 40%;
+    max-height: max-content;
+    position: absolute;
+    right: 0%;
+    border-radius: 10px;
+    color:white;
   }
+
+  .big-title {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 40px;
+    
+  }
+
+  .new-rec {
+    font-family: "Righteous";
+    font-size: 18px;
+    width: 22%;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 1%;
+    top: 15px;
+    color: white;
+    background-color: rgb(244, 72, 105);
+    border-radius: 20px;
+    padding: 10px;
+    text-shadow: 0px 0px 5px rgb(159, 1, 234);
+  }
+
+  .delete-button i {
+    position: absolute;
+    right: 5%;
+    color: rgb(236, 63, 121);
+  }
+
+  .album-detail {
+    width: 40%;
+    max-height: max-content;
+    contain: content;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Righteous';
+    background-color: rgb(37, 35, 41);
+    color: white
 }
+
+.big-cover {
+  max-width: 300px;
+  border: 2px solid gray;
+}
+
+span.save-album {
+  position: absolute;
+  right: 0%;
+  cursor: pointer;
+  pointer-events: auto;
+}
+  
+  }
+
+  
+
+
