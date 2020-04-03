@@ -186,7 +186,7 @@ h1::before {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  width: 55%;
+  width: 57%;
   border-right: 1px solid gray;
   border-left: 1px solid gray;
   padding: 10px;
@@ -205,7 +205,7 @@ h1::before {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  right: 10px;
+  right: 6px;
   top: 10px;
   color: white;
   background-color: rgb(244, 72, 105);
@@ -233,7 +233,7 @@ ol li::before {
 .album-list {
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 80%;
   padding: 5px;
   margin-top: 10px;
 }
@@ -339,7 +339,7 @@ span.save-album {
 .big-title {
     margin-bottom: 5px;
     font-style: italic;
-    font-size: 65px;
+    font-size: 60px;
     
 }
 
@@ -350,7 +350,7 @@ span.save-album {
 
 .track-list {
     /* margin: 100px; */
-    margin-top: 200px;
+    margin-top: 175px;
     padding: 30px;
     font-size: 18px;
     font-style: italic;
@@ -416,7 +416,9 @@ span.save-album {
 
 
 
-@media screen and (max-width: 1200px){
+
+
+@media screen and (max-width: 1400px){
   
   * {
     padding: 0;
@@ -606,7 +608,7 @@ span.save-album {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    width: 70%;
+    width: 60%;
     border-right: 1px solid gray;
     border-left: 1px solid gray;
     padding: 5px;
@@ -833,170 +835,125 @@ span.save-album {
   }
 
 
-
-
-
-
-@media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1050px) {
   
-* {
-  font-size: 10px;
-}
-
-a {
-  font-size: 10px;
-}
-
-h1 {
-  font-size: 80px;
-}
-
-h2 {
-  font-size: 40px;
-  position: relative;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-.sub-head {
-  font-size: 10px;
-  text-align: left;
-}
-
-.user-profile {
-  font-size: 10px;
-}
-
-.header-button {
-  font-size: 15px;
-}
-
-.avatar {
-  max-width: 30px;
-  border-radius: 50%;
-  border: 1px solid rgb(158, 158, 158);
-}
-
-.site-search input {
-  font-size: 15px;
-  width: 200px;
-  height: 30px;
-  border-radius: 20px;
-  padding: 2px;
-}
-
-.site-search button {
-  width: 25px;
-  height: 25px;
-}
-
-.container {
-  width: 100%;
-  border-right: 0px solid gray;
-  border-left: 0px solid gray;
-}
-
-.new-rec {
-  font-size: 30px;
-  width: 175px;
-}
-.album-list {
-  width: 90%;
-}
-.album {
-  width: 50%;
-}
-
-h3 {
-  font-size: 30px;
-}
-
-.sub-head {
-  font-size: 10px;
-}
-
-.user-profile {
-  font-size: 10px;
-}
-
-.header-button {
-  font-size: 15px;
-}
-
-.site-search input {
-  width: 185px;
-  border-radius: 10px;
-  padding: 2px;
-  position: relative;
-}
-
-.site-search button {
-  width: 30px;
-}
-
-.new-rec {
-  font-size: 15px;
-}
-
-.album-list {
-  width: 90%;
-}
-
-.album {
-  width: 100%;
-}
-
-.big-cover {
-  max-width: 330px;
-  border: 2px solid gray;
-}
-
-.track-list {
-  /* margin: 100px; */
-  margin-top: 150px;
-  padding: 20px;
-  font-size: 20px;
-  font-style: italic;
-  background-color: rgb(37, 35, 41);
-  width: 30%;
-  max-height: max-content;
-  position: absolute;
-  right: 15%;
-  border-radius: 20px;
-  color:white;
-}
-
-.big-title {
-  margin-bottom: 5px;
-  font-style: italic;
-  font-size: 30px;
+    * {
+      font-size: 15px;
+    }
   
-}
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+      width: 80%;
+      border-right: 1px solid gray;
+      border-left: 1px solid gray;
+      padding: 5px;
+      contain: content;
+      
+    }
+  
+    h1 {
+      color: white;
+      background-color: black;
+      font-size: 95px;
+      font-family: "Righteous";
+    }
+  
+    h3 {
+      font-size: 40px;
+      font-family: "Righteous";
+    }
+  
+    .new-rec {
+      font-family: "Righteous";
+      font-size: 5px;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: white;
+      background-color: rgb(244, 72, 105);
+      border-radius: 20px;
+      padding: 10px;
+      text-shadow: 0px 0px 5px rgb(159, 1, 234);
+    }
+  
+    .big-cover {
+      max-width: 300px;
+      border: 2px solid gray;
+    }
+    
+    .track-list {
+      /* margin: 100px; */
+      margin-top: 100px;
+      margin-right: -10px;
+      padding: 30px;
+      font-size: 18px;
+      font-style: italic;
+      background-color: rgb(37, 35, 41);
+      width: 40%;
+      max-height: max-content;
+      position: absolute;
+      right: 5%;
+      border-radius: 10px;
+      color:white;
+    }
+  
+    .big-title {
+      margin-bottom: 5px;
+      font-style: italic;
+      font-size: 40px;
+      
+    }
+  
+    .new-rec {
+      font-family: "Righteous";
+      font-size: 15px;
+      width: 20%;
+      font-weight: bold;
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      right: 1%;
+      top: 15px;
+      color: white;
+      background-color: rgb(244, 72, 105);
+      border-radius: 20px;
+      padding: 10px;
+      text-shadow: 0px 0px 5px rgb(159, 1, 234);
+    }
+  
+    .delete-button i {
+      position: absolute;
+      right: 5%;
+      color: rgb(236, 63, 121);
+    }
+  
+    .album-detail {
+      width: 30%;
+      max-height: max-content;
+      contain: content;
+      border: 1px solid gray;
+      border-radius: 20px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      font-family: 'Righteous';
+      background-color: rgb(37, 35, 41);
+      color: white
+  }
+  
+  .big-cover {
+    max-width: 280px;
+    border: 2px solid gray;
+  }
+  
 
-.album-detail {
-  width: 30%;
-  max-height: max-content;
-  contain: content;
-  border: 1px solid gray;
-  border-radius: 20px;
-  margin: 10px;
-  padding: 10px;
-  text-align: center;
-  font-family: 'Righteous';
-  background-color: rgb(37, 35, 41);
-  color: white
-}
 
-
-}
-
-
-
-
-
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
   
   * {
     font-size: 15px;
@@ -1005,7 +962,7 @@ h3 {
   .container {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 100%;
     border-right: 1px solid gray;
     border-left: 1px solid gray;
@@ -1014,9 +971,21 @@ h3 {
     
   }
 
+  h1 {
+    color: white;
+    background-color: black;
+    font-size: 95px;
+    font-family: "Righteous";
+  }
+
+  h3 {
+    font-size: 40px;
+    font-family: "Righteous";
+  }
+
   .new-rec {
     font-family: "Righteous";
-    font-size: 17px;
+    font-size: 5px;
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
@@ -1037,15 +1006,16 @@ h3 {
   
   .track-list {
     /* margin: 100px; */
-    margin-top: 200px;
-    padding: 10px;
-    font-size: 10px;
+    margin-top: 110px;
+    margin-right: -10px;
+    padding: 15px;
+    font-size: 5px;
     font-style: italic;
     background-color: rgb(37, 35, 41);
-    width: 30%;
+    width: 40%;
     max-height: max-content;
     position: absolute;
-    right: 10%;
+    right: 0%;
     border-radius: 10px;
     color:white;
   }
@@ -1053,20 +1023,20 @@ h3 {
   .big-title {
     margin-bottom: 5px;
     font-style: italic;
-    font-size: 65px;
+    font-size: 40px;
     
   }
 
   .new-rec {
     font-family: "Righteous";
-    font-size: 20px;
-    width: 23%;
+    font-size: 18px;
+    width: 22%;
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    right: 5%;
-    top: 10px;
+    right: 1%;
+    top: 15px;
     color: white;
     background-color: rgb(244, 72, 105);
     border-radius: 20px;
@@ -1081,7 +1051,7 @@ h3 {
   }
 
   .album-detail {
-    width: 35%;
+    width: 40%;
     max-height: max-content;
     contain: content;
     border: 1px solid gray;
@@ -1092,6 +1062,18 @@ h3 {
     font-family: 'Righteous';
     background-color: rgb(37, 35, 41);
     color: white
+}
+
+.big-cover {
+  max-width: 300px;
+  border: 2px solid gray;
+}
+
+span.save-album {
+  position: absolute;
+  right: 0%;
+  cursor: pointer;
+  pointer-events: auto;
 }
   
   }
