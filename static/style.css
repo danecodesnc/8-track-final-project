@@ -422,36 +422,10 @@ span.save-album {
 
 
 
-
-
-
 @media screen and (max-width: 1400px){
   
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: rgb(53, 54, 58);
-    font-family: "Nunito";
-    color: rgb(93, 95, 100);
-  }
-  
-  a {
-    text-emphasis: none;
-    text-decoration: none;
-    color: rgb(93, 95, 150);
-  }
-  
-  .header {
-    background: linear-gradient(black, black, rgb(26, 26, 26));
-    height: max-content;
-    contain: content;
-    font-family: "Righteous";
-  }
-  
+
+
   h1 {
     color: white;
     background-color: black;
@@ -470,147 +444,6 @@ span.save-album {
     font-family: "Righteous";
   }
   
-  hr {
-    border-color: gray;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    clear: both;
-    display: grid;
-  }
-  
-  h1::before {
-    content: "8-TRACK";
-    position: absolute;
-    mix-blend-mode: difference;
-    filter: blur(3px);
-    display: grid;
-  }
-  
-  .neon-wrapper {
-    display: inline-flex;
-    filter: brightness(200%);
-    overflow: hidden;
-    margin: 1rem;
-    margin-bottom: 0px;
-    display: grid;
-  }
-  
-  .gradient {
-    background: linear-gradient(
-      113.83124106282105deg,
-      rgba(244, 72, 105, 1) 4.927083333333334%,
-      rgba(159, 1, 234, 1) 97.84374999999999%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    mix-blend-mode: multiply;
-    display: grid;
-  }
-  
-  .dodge {
-    background: radial-gradient(circle, white, black 35%) center / 25% 25%;
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-    mix-blend-mode: color-dodge;
-    animation: dodge-area 15s linear infinite;
-    display: grid;
-  }
-  
-  @keyframes dodge-area {
-    to {
-      transform: translate(50%, 50%);
-    }
-  }
-  
-  .sub-head {
-    margin-left: 25px;
-    font-family: "Righteous";
-    font-size: 20px;
-    text-shadow: 0px 0px 20px rgba(244, 72, 105, 1);
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-    display: grid;
-  }
-  
-  .user-profile {
-    display: inline-block;
-    margin-top: 5px;
-    margin: 15px;
-  }
-  
-  .header-button {
-    color: rgb(173, 173, 173);
-    text-emphasis: none;
-    text-decoration: none;
-  }
-  
-  .header-button:hover {
-    font-weight: bolder;
-  }
-  
-  .avatar {
-    max-width: 50px;
-    border-radius: 50%;
-    border: 1px solid rgb(158, 158, 158);
-  }
-  
-  .links {
-    display: flex;
-  }
-  
-  .lists {
-    margin-left: 5px;
-  }
-  
-  .log {
-    margin-left: 5px;
-  }
-  
-  .login-logout {
-    margin: 2px;
-  }
-  
-  .login-out-container {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-  }
-  
-  .site-search {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    bottom: 5px;
-    right: 0;
-    margin-right: 5px;
-  }
-  
-  .site-search input {
-    font-size: 15px;
-    width: 225px;
-    height: 20px;
-    border-radius: 20px;
-    padding: 2px;
-    position: relative;
-  }
-  
-  .site-search button {
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
-  }
-  
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -621,11 +454,6 @@ span.save-album {
     padding: 5px;
     contain: content;
     
-  }
-  
-  .list-head {
-    display: flex;
-    contain: content;
   }
   
   .new-rec {
@@ -642,22 +470,6 @@ span.save-album {
     border-radius: 20px;
     padding: 10px;
     text-shadow: 0px 0px 5px rgb(159, 1, 234);
-  }
-  
-  ol {
-    list-style: none;
-    counter-reset: album-list;
-  }
-  
-  ol li {
-    counter-increment: album-list;
-  }
-  
-  ol li::before {
-    content: counter(album-list) ". ";
-    font-family: "Righteous";
-    font-size: 30px;
-    display: flex;
   }
   
   .album-list {
@@ -689,27 +501,9 @@ span.save-album {
       pointer-events: none;
     }
   
-  .delete-button i {
-    position: absolute;
-    right: 20%;
-    color: rgb(236, 63, 121);
-  }
-  
-  .priority {
-    font-family: "Righteous";
-    font-size: 30px;
-    margin-right: 10px;
-  }
-  
   .album-cover {
     max-width: 150px;
     border: 1px solid gray;
-  }
-  
-  .album-info {
-    display: flex;
-    flex-direction: column;
-    
   }
   
   .album-title {
@@ -721,50 +515,6 @@ span.save-album {
     font-style: italic;
     cursor: pointer;
     pointer-events: auto;
-  }
-  
-  .artist {
-    display: block;
-    margin: 7px;
-    margin-top: 2px;
-    font-size: 18px;
-    cursor: pointer;
-    pointer-events: auto;
-  }
-  
-  .album-year {
-    margin-left: 7px;
-    font-style: italic;
-  }
-  
-  .album-type {
-    margin-left: 7px;
-    font-style: italic;
-    text-transform: capitalize;
-  }
-  
-  .fa fa-search {
-    font-size: 20px;
-    width: 300px;
-    height: 30px;
-    border-radius: 20px;
-    padding: 2px;
-  }
-  
-  .fas.fa-plus-circle {
-      color: rgb(236, 63, 121);
-    }
-  
-  span.save-album {
-    position: absolute;
-    right: 10%;
-    cursor: pointer;
-    pointer-events: auto;
-  }
-  
-  .big-album-info {
-      float: left;
-      
   }
   
   .big-title {
@@ -824,22 +574,7 @@ span.save-album {
       color: rgb(180,	36,	120)
   }
   
-  .small-cover {
-      border-radius: 50%;
-      max-width: 150px;
-      border: 1px solid gray;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  .detail-title {
-    margin: 5px;
-    font-weight: bold;
-    font-size: 25px;
-    font-style: italic;
-    cursor: pointer;
-    pointer-events: auto;
-  }
+
 
 
   @media screen and (max-width: 1050px) {
@@ -1051,11 +786,6 @@ span.save-album {
     text-shadow: 0px 0px 5px rgb(159, 1, 234);
   }
 
-  .delete-button i {
-    position: absolute;
-    right: 5%;
-    color: rgb(236, 63, 121);
-  }
 
   .album-detail {
     width: 40%;
@@ -1083,7 +813,7 @@ span.save-album {
   pointer-events: auto;
 }
   
-  }
+}
 
   
 
