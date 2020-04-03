@@ -313,7 +313,15 @@ ol li::before {
   text-transform: capitalize;
 }
 
-.search-tracks {
+.show-more {
+    color: #e5e5e5;
+}
+
+.tracks{
+  display: none;
+}
+
+.tracks.active {
     margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
