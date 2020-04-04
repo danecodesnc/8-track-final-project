@@ -40,33 +40,20 @@ function saveAlbum() {
   }
 }
 
-// Sortable.js Here
-let container = document.querySelector(".album-list");
-let names = document.querySelectorAll(".album-block");
-
-Sortable.create(container, {
-  animation: 150,
-  group: "album-sort-order",
-  store: {
-    /**
-     * Get the order of elements. Called once during initialization.
-     * @param   {Sortable}  sortable
-     * @returns {Array}
-     */
-    get: function(sortable) {
-      var order = localStorage.getItem(sortable.options.group.name);
-      return order ? order.split("|") : [];
-    },
-    /**
-     * Save the order of elements. Called onEnd (when the item is dropped).
-     * @param {Sortable}  sortable
-     */
-    set: function(sortable) {
-      var order = sortable.toArray();
-      localStorage.setItem(sortable.options.group.name, order.join("|"));
+let showMoreDivs = document.querySelectorAll(".show-more");
+let tracks = document.querySelectorAll(".tracks");
+for (let div of showMoreDivs) {
+  div.addEventListener("click", function(e) {
+    let el = e.target.nextElementSibling;
+    if (!el.classList.contains("active")) {
+      el.classList.add("active");
+      div.innerHTML = "Show Less";
+    } else {
+      el.classList.remove("active");
+      div.innerHTML = "Show More";
     }
-  }
-});
+  });
+}
 
 document.addEventListener("DOMContentLoaded", event => {
   saveAlbum();

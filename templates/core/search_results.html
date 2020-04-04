@@ -2,29 +2,34 @@
 <body>
   <div class="album-list">
     {% for album_info in all_albums %}
-      <div class="album" data-uri="{{album_info.album_uri}}">
-        <!-- <div class="priority">1</div> -->
-        <span class="save-album"
-          ><i class="fas fa-plus-circle" aria-hidden="true"></i
-        ></span>
-        <img class="album-cover" src="{{ album_info.cover.url }}" />
+    <div class="album" data-uri="{{album_info.album_uri}}">
+      <!-- <div class="priority">1</div> -->
+      <span class="save-album"
+        ><i class="fas fa-plus-circle" aria-hidden="true"></i
+      ></span>
+      <img class="album-cover" src="{{ album_info.cover.url }}" />
 
-        <div class="album-info">
-          <div class="album-title">
-            {{ album_info.name }}
-          </div>
-          <div class="artist" data-artist="{{album_info.artist_uri}}">
-            {{ album_info.artist }}
-          </div>
-          <div class="album-year">{{ album_info.release }}</div>
-          <div class="album-type">{{ album_info.type }}</div>
+      <div class="album-info">
+        <div class="album-title">
+          {{ album_info.name }}
         </div>
+        <div class="artist" data-artist="{{album_info.artist_uri}}">
+          {{ album_info.artist }}
+        </div>
+        <div class="album-year">{{ album_info.release }}</div>
+        <div class="album-type">{{ album_info.type }}</div>
       </div>
-      <div class="search-tracks">
+    </div>
+    <div class="search-tracks">
+      <div class="show-more">Show More</div>
+      <div class="tracks">
         {% for track in album_info.tracks %}
-            <a href="{{ track.url }}" targe="_blank" class="track">{{track.number}}. {{ track.title }}</a>
+        <a href="{{ track.url }}" targe="_blank" class="track"
+          >{{track.number}}. {{ track.title }}</a
+        >
         {% endfor %}
       </div>
+    </div>
     <hr />
     {% endfor %}
   </div>

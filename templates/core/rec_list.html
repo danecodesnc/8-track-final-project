@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
+<script src="{% static 'sortable.js' %}" defer></script>
 <body>
     <div class="container">
         <div class="list-head">
@@ -11,7 +13,7 @@
     <hr>
     
     <div id="container">
-        <ol class="album-list">
+        <ol class="all-albums">
             {% for album in albums %}
             <li>
             <div class="delete-button">
