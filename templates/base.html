@@ -34,8 +34,27 @@
       <h3>Track Your Listening</h3>
     </div>
     <div class="login-out-container">
-      <a class="login-logout header-button" href="/accounts/login/">Login |</a>
+      {% if user.is_authenticated %}
       <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
+      {% else %}
+      <a class="login-logout header-button" href="/accounts/login/">Login</a>
+      {% endif %}
+    </div>
+    <div class="lines">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+    <div class="mobile-menu">
+      <img class="avatar" src="{{request.user.avatar.url}}" />
+      <div class="links">
+        <div class="profile">{{request.user.username}} |</div>
+      </div>
+      {% if user.is_authenticated %}
+      <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
+      {% else %}
+      <a class="login-logout header-button" href="/accounts/login/">Login</a>
+      {% endif %}
     </div>
     <div class="site-search">
       <form action="/albums/search/" method="GET" id="site-search">
