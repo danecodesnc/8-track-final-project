@@ -19,8 +19,8 @@ a {
 .header {
   background: linear-gradient(black, black, rgb(26, 26, 26));
   height: max-content;
-  contain: content;
   font-family: "Righteous";
+  position: relative;
 }
 
 h1 {
@@ -158,12 +158,13 @@ h1::before {
   right: 5px;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 .site-search {
   display: flex;
   justify-content: flex-end;
-  position: absolute;
-  bottom: 5px;
-  right: 0;
   margin-right: 5px;
 }
 
@@ -249,14 +250,14 @@ ol li::before {
 }
 
 .album-block {
-    display: flex;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    contain: content;
-    position: relative;
-    pointer-events: none;
-  }
+  display: flex;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  contain: content;
+  position: relative;
+  pointer-events: none;
+}
 
 .delete-button i {
   position: absolute;
@@ -289,7 +290,6 @@ ol li::before {
   font-style: italic;
   cursor: pointer;
   pointer-events: auto;
-  
 }
 
 .artist {
@@ -299,7 +299,6 @@ ol li::before {
   font-size: 18px;
   cursor: pointer;
   pointer-events: auto;
-  
 }
 
 .album-year {
@@ -314,19 +313,19 @@ ol li::before {
 }
 
 .show-more {
-    color: #e5e5e5;
-    cursor: pointer;
+  color: #e5e5e5;
+  cursor: pointer;
 }
 
-.tracks{
+.tracks {
   display: none;
 }
 
 .tracks.active {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-style: italic;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-style: italic;
 }
 
 .fa fa-search {
@@ -338,8 +337,8 @@ ol li::before {
 }
 
 .fas.fa-plus-circle {
-    color: rgb(236, 63, 121);
-  }
+  color: rgb(236, 63, 121);
+}
 
 span.save-album {
   position: absolute;
@@ -349,73 +348,72 @@ span.save-album {
 }
 
 .big-album-info {
-    float: left;
+  float: left;
 }
 
 .big-title {
-    margin-bottom: 5px;
-    font-style: italic;
-    font-size: 60px;
-    
+  margin-bottom: 5px;
+  font-style: italic;
+  font-size: 60px;
 }
 
 .big-cover {
-    max-width: 400px;
-    border: 2px solid gray;
+  max-width: 400px;
+  border: 2px solid gray;
 }
 
 .track-list {
-    /* margin: 100px; */
-    margin-top: 175px;
-    padding: 30px;
-    font-size: 18px;
-    font-style: italic;
-    background-color: rgb(37, 35, 41);
-    width: 40%;
-    max-height: max-content;
-    position: absolute;
-    right: 5%;
-    border-radius: 20px;
-    color:white;
+  /* margin: 100px; */
+  margin-top: 175px;
+  padding: 30px;
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgb(37, 35, 41);
+  width: 40%;
+  max-height: max-content;
+  position: absolute;
+  right: 5%;
+  border-radius: 20px;
+  color: white;
 }
 
 .artist-image {
-    width: 400px;
-    border-radius: 50%;
-    border: 2px solid gray;
+  width: 400px;
+  border-radius: 50%;
+  border: 2px solid gray;
 }
 
 .artist-discography {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 .discog {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .album-detail {
-    width: 31%;
-    max-height: max-content;
-    contain: content;
-    border: 1px solid gray;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Righteous';
-    background-color: rgb(37, 35, 41);
-    color: rgb(180,	36,	120)
+  width: 31%;
+  max-height: max-content;
+  contain: content;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Righteous";
+  background-color: rgb(37, 35, 41);
+  color: rgb(180, 36, 120);
 }
 
 .small-cover {
-    border-radius: 50%;
-    max-width: 150px;
-    border: 1px solid gray;
-    margin-left: auto;
-    margin-right: auto;
+  border-radius: 50%;
+  max-width: 150px;
+  border: 1px solid gray;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .detail-title {
@@ -427,278 +425,64 @@ span.save-album {
   pointer-events: auto;
 }
 
-
-
-
-
-@media screen and (max-width: 1400px){
-  
-h1 {
-  font-size: 150px;
-    
+.lines {
+  cursor: pointer;
+  display: none;
 }
 
-h2 {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-  
-h3 {
-  font-size: 50px;
-    
-}
-  
-.container {
-  margin-top: 1rem;
-  width: 60%;
-  padding: 5px;
-    
-    
-}
-  
-.new-rec {
-  font-size: 15px;
-  border-radius: 20px;
-  padding: 10px;
-}
-  
-.album-list {
-  width: 75%;
-  padding: 5px;
-  margin-top: 10px;
-    
-}
-  
-.album {
-  width: 100%;
-}
+@media only screen and (max-width: 767px) {
+  .tracks.active {
+    grid-template-columns: 1fr;
+  }
 
-.album-cover {
-  max-width: 150px;
-  border: 1px solid gray;
-}
-  
-.album-title {
-  margin: 5px;
-  font-size: 25px;
-   
-}
-  
-.big-title {
-  margin-bottom: 5px;
-  font-size: 40px;
-}
-  
-.big-cover {
-  max-width: 400px;
-  border: 2px solid gray;
-}
-  
-.track-list {
-    margin-top: 100px;
-    padding: 20px;
-    font-size: 20px;
-    width: 30%;
-    right: 5%;
-    border-radius: 20px;
-    color:white;
-}
-  
-.artist-image {
-    width: 400px;
-    border-radius: 50%;
-    border: 2px solid gray;
-}
-  
-.artist-discography {
-   font-size: 30px;
-}
+  .mobile-menu {
+    display: block;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 270px;
+    transition: all 0.3s ease;
+    background: #fe5151;
+    z-index: 12;
+    left: -270px;
+  }
 
-  
-.album-detail {
-    width: 31%;
-    border: 1px solid gray;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
-      
-}
-  
+  .mobile-menu.toggled {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.64);
+  }
 
+  .login-out-container {
+    display: none;
+  }
 
+  .lines {
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 15%;
+  }
 
-@media screen and (max-width: 1050px) {
-  
-* {
-  font-size: 15px;
-}
-  
-.container {
-  margin-top: 1rem;
-  width: 80%;
-  padding: 5px;
-      
-}
-  
+  span.line {
+    height: 3px;
+    width: 30px;
+    background: #e5e5e5;
+    display: block;
+    margin: 5px;
+    border-radius: 0.25rem;
+  }
+
   h1 {
-    font-size: 95px;
-      
+    font-size: 5rem;
   }
-  
+
   h3 {
-    font-size: 40px;
-      
-  }
-  
-  .new-rec {
-    font-size: 5px;
-    right: 10px;
-    top: 10px;
-    border-radius: 20px;
-    padding: 10px;
-  }
-  
-  .big-cover {
-    max-width: 300px;
-    border: 2px solid gray;
-  }
-    
-  .track-list {
-      
-    margin-top: 100px;
-    margin-right: -10px;
-    padding: 30px;
-    font-size: 18px;
-    width: 40%;
-    right: 5%;
-    border-radius: 10px;
-      
-  }
-  
-    .big-title {
-      margin-bottom: 5px;
-      font-size: 40px;
-      
-    }
-  
-  .new-rec {
-    font-size: 15px;
-    width: 20%;
-    right: 1%;
-    top: 15px;
-    border-radius: 20px;
-    padding: 10px;
-  
-  }
-  
-  .delete-button i {
-    right: 5%;
-  }
-  
-  .album-detail {
-    width: 30%;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
-    color: white
-  }
-  
-  .big-cover {
-    max-width: 280px;
-    border: 2px solid gray;
-  }
-  
-
-
-
-@media screen and (max-width: 800px) {
-  
-  * {
-    font-size: 15px;
-  
+    text-align: center;
+    font-size: 30px;
   }
 
   .container {
-    margin-top: 1rem;
-    width: 100%;
-    padding: 5px;
-    
+    width: 90%;
+    border: none;
   }
-
-  h1 {
-    color: white;
-    background-color: black;
-    font-size: 95px;
-  
-  }
-
-  h3 {
-    font-size: 40px;
-  
-  }
-
-  .new-rec {
-    font-size: 5px;
-    right: 10px;
-    top: 10px;
-    border-radius: 20px;
-    padding: 10px;
-    
-  }
-
-  .big-cover {
-    max-width: 300px;
-    border: 2px solid gray;
-  
-  }
-  
-  .track-list {
-    margin-top: 110px;
-    margin-right: -10px;
-    padding: 15px;
-    font-size: 5px;
-    width: 40%;
-    right: 0%;
-    color:white;
-  
-  }
-
-  .big-title {
-    margin-bottom: 5px;
-    font-size: 40px;
-    
-  }
-
-  .new-rec {
-    font-size: 18px;
-    width: 22%;
-    right: 1%;
-    top: 15px;
-    color: white;
-    border-radius: 20px;
-    padding: 10px;
-
-  }
-
-
-  .album-detail {
-    width: 40%;
-    border: 1px solid gray;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 10px;
-    color: white
-
 }
-
-.big-cover {
-  max-width: 300px;
-  border: 2px solid gray;
-
-}
-  
-}
-
-  
-
 

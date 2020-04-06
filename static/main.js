@@ -40,6 +40,7 @@ function saveAlbum() {
   }
 }
 
+// accordion js here
 let showMoreDivs = document.querySelectorAll(".show-more");
 let tracks = document.querySelectorAll(".tracks");
 for (let div of showMoreDivs) {
@@ -50,10 +51,24 @@ for (let div of showMoreDivs) {
       div.innerHTML = "Show Less";
     } else {
       el.classList.remove("active");
-      div.innerHTML = "Show More";
+      div.innerHTML = "See Tracks";
     }
   });
 }
+
+let lines = document.querySelector(".lines");
+let menu = document.querySelector(".mobile-menu");
+let removeMenu = document.querySelector(".container");
+
+lines.addEventListener("click", function() {
+  menu.style.left = "0";
+  menu.classList.add("toggled");
+});
+
+removeMenu.addEventListener("click", function() {
+  menu.style.left = "-270px";
+  menu.classList.remove("toggled");
+});
 
 document.addEventListener("DOMContentLoaded", event => {
   saveAlbum();
