@@ -556,6 +556,10 @@ form#site-search input {
     font-size: 30px;
   }
 
+  .dodge {
+      position: relative;
+  }
+
   .container {
     width: 90%;
     border: none;
@@ -570,7 +574,7 @@ form#site-search input {
   }
 
   .big-cover {
-    max-width: 100%;
+    width: 100%;
   }
 
   .track-list {
