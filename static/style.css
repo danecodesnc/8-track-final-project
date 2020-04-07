@@ -586,17 +586,23 @@ form#site-search input {
     margin: 1rem auto;
   }
 
+  .new-rec {
+      position: relative;
+      max-width: max-content;
+      margin-bottom: 1rem;
+  }
+
   .artist-image {
     width: 250px;
     margin-left: 20%;
   }
 
   .album-detail {
-    width: 150px;
+    width: 90%;
   }
 
   .small-cover {
-    width: 100px;
+    width: 200px;
   }
 
   .detail-title {
