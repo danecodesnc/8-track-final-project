@@ -26,7 +26,7 @@ a {
 h1 {
   color: white;
   background-color: black;
-  font-size: 150px;
+  font-size: 5rem;
   font-family: "Righteous";
 }
 
@@ -154,8 +154,8 @@ h1::before {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
 }
 
 .mobile-menu {
@@ -362,6 +362,7 @@ span.save-album {
 .big-cover {
   max-width: 400px;
   border: 2px solid gray;
+  height: 400px;
 }
 
 .track-list {
@@ -514,10 +515,6 @@ form#site-search input {
     display: block;
     margin: 5px;
     border-radius: 0.25rem;
-  }
-
-  h1 {
-    font-size: 5rem;
   }
 
   h3 {
