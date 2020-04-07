@@ -353,6 +353,10 @@ ol li::before {
   color: rgb(236, 63, 121);
 }
 
+.fas.fa-plus-circle.added {
+    color: rgb(14, 233, 32);
+}
+
 span.save-album {
   position: absolute;
   right: 10%;

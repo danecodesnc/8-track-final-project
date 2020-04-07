@@ -40,6 +40,13 @@ function saveAlbum() {
   }
 }
 
+let buttons = document.querySelectorAll(".fa-plus-circle");
+for (let button of buttons) {
+    button.addEventListener('click', function(event) {
+        button.classList.add("added");
+    })    
+}
+
 // accordion js here
 let showMoreDivs = document.querySelectorAll(".show-more");
 let tracks = document.querySelectorAll(".tracks");
