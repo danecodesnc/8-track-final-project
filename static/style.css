@@ -592,11 +592,11 @@ form#site-search input {
   }
 
   .album-detail {
-    width: 45%;
+    width: 150px;
   }
 
   .small-cover {
-    max-width: 100px;
+    width: 100px;
   }
 
   .detail-title {
