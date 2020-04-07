@@ -30,10 +30,13 @@
       <span class="gradient"></span>
       <span class="dodge"></span>
     </div>
-    <div class="sub-head">
-      <h3>Track Your Listening</h3>
-    </div>
     <div class="login-out-container">
+      <div class="site-search desktop">
+        <form action="/albums/search/" method="GET" id="site-search">
+          <input type="text" name="site-search" placeholder="Search 8-Track" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
       {% if user.is_authenticated %}
       <a class="login-logout header-button" href="/accounts/logout/">Logout </a>
       {% else %}
@@ -57,21 +60,23 @@
       <a class="login-logout header-button" href="/accounts/login/">Login</a>
       {% endif %}
     </div>
-    <div class="site-search">
+    <div class="site-search mobile">
       <form action="/albums/search/" method="GET" id="site-search">
         <input type="text" name="site-search" placeholder="Search 8-Track" />
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
-    <div class="user-profile">
       <a class="header-button" href="/">
         <img class="avatar" src="{{request.user.avatar.url}}" />
         <div class="links">
-          <div class="profile">{{request.user.username}} |</div>
+          <div class="profile">{{request.user.username}}</div>
         </div>
       </a>
     </div>
   </header>
+  <div class="sub-head">
+    <h3>Track Your Listening</h3>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.1/Sortable.min.js"></script>
   <body>
     {% block content %} {% endblock %}
