@@ -32,6 +32,7 @@ def new_album(request):
        instance.users = request.user
        instance.save()
        print(data)
+       return redirect ('/')
        
 
 def site_search(request):
