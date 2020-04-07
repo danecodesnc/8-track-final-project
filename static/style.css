@@ -270,6 +270,7 @@ ol li::before {
   contain: content;
   position: relative;
   pointer-events: none;
+  flex-wrap: wrap;
 }
 
 .delete-button i {
@@ -484,6 +485,10 @@ form#site-search input {
 @media only screen and (max-width: 767px) {
   .tracks.active {
     grid-template-columns: 1fr;
+  }
+
+  .album-cover {
+    max-width: 100%;
   }
 
   .mobile-menu {
