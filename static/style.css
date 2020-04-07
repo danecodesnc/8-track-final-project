@@ -134,6 +134,12 @@ h1::before {
   border: 1px solid rgb(158, 158, 158);
 }
 
+.mobile-menu .avatar {
+  max-width: 50px;
+  border-radius: 50%;
+  border: 1px solid rgb(158, 158, 158);
+}
+
 .links {
   display: flex;
 }
@@ -190,7 +196,8 @@ h1::before {
   width: 57%;
   border-right: 1px solid gray;
   border-left: 1px solid gray;
-  padding: 10px;
+  padding: 5%;
+  padding-top: 5px;
   contain: content;
 }
 
