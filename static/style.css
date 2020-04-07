@@ -119,6 +119,10 @@ h1::before {
   margin: 15px;
 }
 
+.profile {
+  margin-left: 1rem;
+}
+
 .header-button {
   color: rgb(173, 173, 173);
   text-emphasis: none;
@@ -605,5 +609,9 @@ form#site-search input {
 
   .header-button {
     display: none;
+  }
+
+  .profile {
+    margin-left: 0;
   }
 }
