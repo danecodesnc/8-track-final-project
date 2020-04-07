@@ -42,9 +42,10 @@ function saveAlbum() {
 
 let buttons = document.querySelectorAll(".fa-plus-circle");
 for (let button of buttons) {
-    button.addEventListener('click', function(event) {
-        button.classList.add("added");
-    })    
+  button.addEventListener("click", function(event) {
+    button.classList.remove("fas", "fa-plus-circle");
+    button.classList.add("fas", "fa-check-circle");
+  });
 }
 
 // accordion js here
