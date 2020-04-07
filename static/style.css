@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 body {
@@ -118,6 +119,10 @@ h1::before {
   margin: 15px;
 }
 
+.profile {
+  margin-left: 1rem;
+}
+
 .header-button {
   color: rgb(173, 173, 173);
   text-emphasis: none;
@@ -133,10 +138,6 @@ h1::before {
   border-radius: 50%;
   border: 1px solid rgb(158, 158, 158);
   margin-left: 10px;
-}
-
-.profile {
-    margin-left: 10px;
 }
 
 .mobile-menu .avatar {
@@ -488,7 +489,11 @@ form#site-search input {
     height: 100%;
     width: 270px;
     transition: all 0.3s ease;
-    background: #fe5151;
+    background: linear-gradient(
+      113.83124106282105deg,
+      rgba(244, 72, 105, 1) 4.927083333333334%,
+      rgba(159, 1, 234, 1) 97.84374999999999%
+    );
     z-index: 12;
     left: -270px;
     padding: 2rem;
@@ -500,14 +505,16 @@ form#site-search input {
     width: 100%;
     margin-top: 1rem;
     font-size: 18px;
-    color: rgb(173, 173, 173);
+    color: #fff;
+    text-align: left;
   }
 
   .mobile-menu .links {
     display: block;
     width: 100%;
     margin: 1rem 0;
-    color: rgb(173, 173, 173);
+    color: #fff;
+    text-align: left;
   }
 
   .mobile-menu.toggled {
@@ -570,26 +577,26 @@ form#site-search input {
   }
 
   .artist-image {
-      width: 250px;
-      margin-left: 20%;
+    width: 250px;
+    margin-left: 20%;
   }
 
   .album-detail {
-      width: 45%;
+    width: 45%;
   }
 
   .small-cover {
-      max-width: 100px;
+    max-width: 100px;
   }
 
   .detail-title {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .album-detail .album-year {
-      font-size: 15px;
+    font-size: 15px;
   }
-  
+
   .site-search.desktop {
     display: none;
   }
@@ -602,5 +609,9 @@ form#site-search input {
 
   .header-button {
     display: none;
+  }
+
+  .profile {
+    margin-left: 0;
   }
 }
