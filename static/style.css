@@ -103,13 +103,13 @@ h1::before {
 }
 
 .sub-head {
-  margin-left: 25px;
+  margin: 1rem auto;
   font-family: "Righteous";
   font-size: 20px;
   text-shadow: 0px 0px 20px rgba(244, 72, 105, 1);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
-  display: grid;
+  text-align: center;
 }
 
 .user-profile {
@@ -459,6 +459,14 @@ form#site-search input {
   border-radius: 0.25rem;
 }
 
+.site-search.desktop {
+  margin-right: 1rem;
+}
+
+.site-search.mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
   .tracks.active {
     grid-template-columns: 1fr;
@@ -550,5 +558,19 @@ form#site-search input {
 
   form#site-search {
     margin: 1rem auto;
+  }
+
+  .site-search.desktop {
+    display: none;
+  }
+
+  .site-search.mobile {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+  }
+
+  .header-button {
+    display: none;
   }
 }

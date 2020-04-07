@@ -4,6 +4,7 @@ title %}{% trans "Register for an account" %}{% endblock %} {% block content %}
   {% csrf_token %} {{ form.as_p }}
   <input type="submit" value="{% trans 'Submit' %}" />
 </form>
+
 {% endblock %} {% comment %} **registration/registration_form.html** Used to
 show the form users will fill out to register. By default, has the following
 context: ``form`` The registration form. This will be an instance of some
