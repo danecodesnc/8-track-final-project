@@ -199,7 +199,7 @@ h1::before {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
-  width: 57%;
+  width: 65%;
   border-right: 1px solid gray;
   border-left: 1px solid gray;
   padding: 5%;
@@ -613,5 +613,13 @@ form#site-search input {
 
   .profile {
     margin-left: 0;
+  }
+
+  .album-list {
+    width: 100%;
+  }
+
+  span.save-album {
+    right: 0%;
   }
 }
