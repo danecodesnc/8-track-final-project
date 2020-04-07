@@ -64,7 +64,7 @@ h1::before {
   display: inline-flex;
   filter: brightness(200%);
   overflow: hidden;
-  margin: 1rem;
+  margin: 0 1rem;
   margin-bottom: 0px;
   display: grid;
 }
@@ -132,6 +132,11 @@ h1::before {
   max-width: 50px;
   border-radius: 50%;
   border: 1px solid rgb(158, 158, 158);
+  margin-left: 10px;
+}
+
+.profile {
+    margin-left: 10px;
 }
 
 .mobile-menu .avatar {
