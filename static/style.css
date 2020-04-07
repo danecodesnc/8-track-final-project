@@ -411,7 +411,6 @@ span.save-album {
   text-align: center;
   font-family: "Righteous";
   background-color: rgb(37, 35, 41);
-  color: rgb(180, 36, 120);
 }
 
 .small-cover {
@@ -427,8 +426,6 @@ span.save-album {
   font-weight: bold;
   font-size: 25px;
   font-style: italic;
-  cursor: pointer;
-  pointer-events: auto;
 }
 
 .mobile-menu {
@@ -567,6 +564,27 @@ form#site-search input {
     margin: 1rem auto;
   }
 
+  .artist-image {
+      width: 250px;
+      margin-left: 20%;
+  }
+
+  .album-detail {
+      width: 45%;
+  }
+
+  .small-cover {
+      max-width: 100px;
+  }
+
+  .detail-title {
+      font-size: 20px;
+  }
+
+  .album-detail .album-year {
+      font-size: 15px;
+  }
+  
   .site-search.desktop {
     display: none;
   }
