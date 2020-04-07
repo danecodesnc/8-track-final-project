@@ -488,7 +488,9 @@ form#site-search input {
   }
 
   .album-cover {
-    width: 100%;
+    max-width: 100%;
+    width: 100% !important;
+    height: 100%;
   }
 
   .mobile-menu {
