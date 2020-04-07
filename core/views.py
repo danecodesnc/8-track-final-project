@@ -38,6 +38,7 @@ def site_search(request):
     search_str = request.GET.get('site-search')
     result = sp.search(q=(search_str), type='album,artist', limit=25)
     return result
+    
 
 def search_results(request):
     search = site_search(request)
