@@ -574,7 +574,8 @@ form#site-search input {
   }
 
   .big-cover {
-    width: 100%;
+    width: 350px;
+    height: 350px;
   }
 
   .track-list {
