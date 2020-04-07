@@ -503,4 +503,8 @@ span.save-album {
     margin: 1rem auto;
     width: 100%;
   }
+
+  .delete-button i {
+    right: 0;
+  }
 }
