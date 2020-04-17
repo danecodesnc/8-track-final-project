@@ -1,3 +1,9 @@
+This is a final project I worked with 2 other teammates on from Momentum Learn recently. I created the CSS and CSS media queries on this project. I also worked with Python and Django in creating the Artist and Album profiles to be pulled from Spotify using the Spotipy API wrapper. If you have any further questions on this, please feel free to email me at danecodesnc@gmail.com. Thanks for viewing.
+
+
+
+
+
 # Django Project Template
 
 This project was generated from the Momentum Django project template. This template sets up some minimal changes:
