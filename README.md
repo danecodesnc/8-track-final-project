@@ -1,3 +1,11 @@
+To view the full demonstration of 8-track, please visit the website link below. Thank you for your interest in 8-track.
+
+https://demoday.momentumlearn.com/projects/8track/
+
+
+
+
+
 # Django Project Template
 
 This project was generated from the Momentum Django project template. This template sets up some minimal changes:
